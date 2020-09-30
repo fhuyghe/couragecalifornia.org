@@ -1,0 +1,29 @@
+.top-banner{
+  background-color: theme-color(black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: 999;
+  
+  .container{
+    display: flex;
+    align-items: center;
+  }
+
+  .nav li {
+    @extend .nav-item;
+  
+    a {
+      @extend .nav-link;
+      color: theme-color(white);
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &:hover{
+        color: theme-color(yellow);
+      }
+    }
+  }
+}

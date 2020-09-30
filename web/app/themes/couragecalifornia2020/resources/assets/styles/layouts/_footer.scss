@@ -1,0 +1,45 @@
+footer.main-footer{
+    background-color: theme-color(black);
+    color: theme-color(white);
+    padding: $grid-gutter 0;
+
+    .copyright{
+        color: theme-color(grey);
+        margin-top: 5px;
+    }
+
+    ul{
+        padding-left: 0;
+        list-style: none;
+
+        a{
+            color: theme-color(white);
+
+            &:hover{
+                color: theme-color(yellow);
+            }
+        }
+    }
+
+    .left{
+        a{
+            text-transform: uppercase;
+        }
+    }
+
+    .right{
+        ul{
+            display: flex;
+            
+            li{
+                margin-right: 5px;
+                
+                &:last-child{
+                    flex: 1;
+                    text-align: right;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

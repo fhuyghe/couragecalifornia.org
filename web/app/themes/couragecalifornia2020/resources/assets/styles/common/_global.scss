@@ -1,0 +1,93 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.wrap{
+    min-height: 100vh;
+    padding-top: $header-height; //Height of the header
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+    }
+
+    &.button{
+        display: inline-block;
+        background-color: theme-color(blue);
+        padding: 1em 2em;
+        color: theme-color(white);
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+
+//Newsletter Form
+
+.newsletter-form .form-wrap{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    @include media-breakpoint-up(md){
+        flex-flow: row wrap;
+    }
+}
+
+.form-wrap{
+
+    #ak-errors{
+        order: 1;
+        flex: 0 0 100%;
+        color: red;
+        list-style: none;
+    }
+
+    input[type="email"],
+    input[type="tel"],
+    input[type="text"]{
+        border: 0;
+        border: 2px solid black;
+        border-right: 0;
+        background-color: transparent;
+        padding: 10px 20px;
+        flex: 1;
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &:focus{
+            outline: 0;
+        }
+
+        &::placeholder{
+            color: transparentize($color: #000000, $amount: .4);
+        }
+
+        &:-internal-autofill-selected{
+            background-color: transparent!important;
+        }
+    }
+
+    input[type="submit"]{
+        background-color: theme-color(blue);
+        color: theme-color(white);
+        text-transform: uppercase;
+        border: 0;
+        border-radius: 0;
+        outline: 0;
+        padding: 10px 20px;
+    }
+}
