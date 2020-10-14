@@ -14,9 +14,18 @@
 
   .nav li {
     @extend .nav-item;
+    padding: 0.5rem 1rem;
+
+    &.current-menu-item{
+      a{
+        border-color: theme-color(white);
+      }
+    }
   
     a {
       @extend .nav-link;
+      border-bottom: 3px solid transparent;
+      padding: 0;
       color: theme-color(white);
       text-transform: uppercase;
       font-weight: 600;
