@@ -6,5 +6,10 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
+    <nav class="nav-secondary">
+      @if (has_nav_menu('social_menu'))
+        {!! wp_nav_menu(['theme_location' => 'social_menu', 'menu_class' => 'nav']) !!}
+      @endif
+    </nav>
   </div>
 </header>
