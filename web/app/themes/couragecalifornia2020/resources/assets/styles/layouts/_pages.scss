@@ -50,7 +50,9 @@
         text-align: center;
 
         h1{
-            font-size: 4em;
+            font-size: 3em;
+            max-width: 900px;
+            margin: auto;
 
             span{
                 color: theme-color(yellow);

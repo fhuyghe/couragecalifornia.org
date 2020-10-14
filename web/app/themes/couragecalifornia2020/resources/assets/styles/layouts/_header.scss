@@ -6,14 +6,23 @@
   width: 100%;
   height: $header-height;
   z-index: 999;
+  padding: $grid-gutter / 2;
   
   .container{
+    max-width: none;
     display: flex;
     align-items: center;
+    height: 100%;
   }
 
-  .nav li {
+  img{
+    height: 40px;
+  }
+
+  .nav{
+    li {
     @extend .nav-item;
+    font-size: .9em;
     padding: 0.5rem 1rem;
 
     &.current-menu-item{
@@ -33,6 +42,20 @@
       &:hover{
         color: theme-color(yellow);
       }
+    }
+  }
+  }
+}
+
+.nav-primary{
+  flex: 1;
+  padding-left: $grid-gutter / 2;
+}
+
+.nav-secondary{
+  li{
+    &:last-child{
+      display: none;
     }
   }
 }
