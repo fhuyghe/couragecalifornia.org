@@ -1,6 +1,6 @@
 @php $categories = get_the_category($article->ID); @endphp
 
-<div class="article">
+<div class="article slide-up">
     <div class="thumbnail">
         {!! get_the_post_thumbnail($article->ID, 'medium') !!}
     </div>

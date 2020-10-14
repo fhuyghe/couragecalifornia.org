@@ -134,3 +134,41 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+// Register Post Types
+// Our custom post type function
+function create_posttype() {
+ 
+    register_post_type( 'staff',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Staff' ),
+                'singular_name' => __( 'Staff Member' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'staff'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-businessperson',
+            'supports' => array( 'title', 'thumbnail' ),
+        )
+    );
+    
+    register_post_type( 'job',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Jobs' ),
+                'singular_name' => __( 'Job' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'job'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-hammer',
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', __NAMESPACE__.'\\create_posttype' );

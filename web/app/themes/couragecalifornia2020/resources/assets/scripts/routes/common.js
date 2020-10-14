@@ -1,6 +1,14 @@
+import ScrollReveal from 'scrollreveal'
+
 export default {
   init() {
     // JavaScript to be fired on all pages
+    var slideUp = {
+      distance: '150%',
+      origin: 'bottom',
+      opacity: null,
+  };
+    ScrollReveal().reveal('.slide-up', slideUp);
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

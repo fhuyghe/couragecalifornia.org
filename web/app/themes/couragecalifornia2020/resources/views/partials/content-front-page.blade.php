@@ -59,7 +59,7 @@
  <section id="courageScore" class="banner">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 text">
+            <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 {!! $banner['text'] !!}
                 <a class="button" href="/courage-score">{{ $banner['button_text'] }}</a>
@@ -76,7 +76,7 @@
  <section id="voterGuide" class="banner">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 text">
+            <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 {!! $banner['text'] !!}
                 <a class="button" href="/courage-score">{{ $banner['button_text'] }}</a>

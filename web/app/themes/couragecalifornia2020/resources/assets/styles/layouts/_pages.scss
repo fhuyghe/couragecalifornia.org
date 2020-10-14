@@ -152,3 +152,32 @@
         background: theme-color(beige);
     }
 }
+
+.page.about{
+    .main{
+        padding: 0;
+    }
+
+    #top{
+        background: theme-color(yellow);
+    }
+
+    #staff{
+        .person{
+            .portrait{
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    #jobs{
+        background-color: theme-color(yellow);
+
+        .job{
+            background: theme-color(white);
+            padding: $grid-gutter / 2;
+        }
+    }
+}
