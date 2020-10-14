@@ -8,7 +8,7 @@
     }
 }
 
-.home{
+.page.home{
     .wrap{
         padding-top: 0;
 
@@ -153,6 +153,32 @@
     }
 }
 
+// ACTIONS
+.page.actions{
+    #actions{
+        padding-top: $grid-gutter;
+
+        .article{
+            @extend .col-md-4;
+            margin-bottom: $grid-gutter;
+
+            &:first-child{
+                @extend .row;
+                @extend .col-md-12;
+                
+                .thumbnail{
+                    @extend .col-md-6;
+                }
+
+                .text{
+                    @extend .col-md-6;
+                }
+            }
+        }
+    }
+}
+
+// ABOUT
 .page.about{
     .main{
         padding: 0;
@@ -179,5 +205,48 @@
             background: theme-color(white);
             padding: $grid-gutter / 2;
         }
+    }
+}
+
+
+// Article Blocks
+.article{
+    .thumbnail{
+        margin-bottom: $grid-gutter / 2;
+
+        img{
+            height: auto;
+        }
+    }
+
+    h3{
+        text-transform: capitalize;
+        font-size: 1.2em;
+        font-weight: 600;
+
+        a{
+            color: theme-color(black);
+        }
+    }
+
+    .category{
+        font-size: 1em;
+        text-transform: uppercase;
+        color: theme-color(yellow);
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .excerpt{
+        margin-bottom: 10px;
+    }
+
+    .byline{
+        margin-bottom: 0;
+    }
+
+    time{
+        color: theme-color(grey);
+        font-size: .9em;
     }
 }

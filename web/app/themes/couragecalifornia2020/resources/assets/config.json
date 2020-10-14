@@ -10,7 +10,7 @@
   },
   "publicPath": "app/themes/couragecalifornia2020",
   "devUrl": "http://couragecalifornia.test",
-  "proxyUrl": "http://localhost:3003/",
+  "proxyUrl": "http://localhost:3006/",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

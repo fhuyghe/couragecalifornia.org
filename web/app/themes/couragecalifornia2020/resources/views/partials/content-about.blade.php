@@ -27,18 +27,28 @@
     </div>
 </section>
 
+{{-- Boards of Directors --}}
+@php $boards = $data['boards_of_director'] @endphp
 <section id="directors">
     <div class="container">
         <h2>Boards of Directors</h2>
+        @foreach ($boards as $board)
+        <div class="board">
+            <h3>{{ $board['title'] }}</h3>
+            <div class="directors">{!! $board['directors'] !!}</div>
+        </div>
+        @endforeach
     </div>
 </section>
 
 @if($jobs)
+@php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
 <section id="jobs">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2>Work with us</h2>
+                <h2>{{ $jobsText['title'] }}</h2>
+                <p>{{ $jobsText['text'] }}</p>
             </div>
             <div class="col-md-8">
                 @foreach ($jobs as $job)
