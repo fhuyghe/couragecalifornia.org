@@ -65,10 +65,22 @@
         padding-bottom: 0;
         text-align: center;
 
+        .star{
+            margin-bottom: $grid-gutter;
+            
+            svg{
+                height: $grid-gutter;
+                width: $grid-gutter;
+            }
+        }
+        
         .text{
-            font-size: 3em;
+            font-family: 'Gilam', sans-serif;
+            font-size: 2.5em;
             text-transform: uppercase;
             font-weight: 600;
+            line-height: 1.2em;
+            margin-bottom: $grid-gutter * 2;
         }
     }
 
