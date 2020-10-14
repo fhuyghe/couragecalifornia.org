@@ -42,7 +42,7 @@
 
     #top{
         padding-top: $header-height;
-        background: rgba(theme-color(black), .8);
+        background: rgba(theme-color(black), .4);
         color: theme-color(white);
         min-height: 80vh;
         display: flex;
@@ -71,6 +71,7 @@
             svg{
                 height: $grid-gutter;
                 width: $grid-gutter;
+                 fill: theme-color(white);
             }
         }
         
@@ -80,7 +81,13 @@
             text-transform: uppercase;
             font-weight: 600;
             line-height: 1.2em;
-            margin-bottom: $grid-gutter * 2;
+            margin-bottom: $grid-gutter;
+        }
+
+        .image{
+            img{
+                width: 100%;
+            }
         }
     }
 
@@ -138,33 +145,6 @@
 
         .success{
             display: none;
-        }
-
-        .form-wrap{
-            input{
-                margin-bottom: 0;
-
-                &[type="submit"]{
-                    border: 2px solid theme-color(blue);
-
-                    &:after{
-                        content: "→";
-                        display: inline-block;
-                        padding-left: 10px;
-                        transition: .25s;
-                    }
-        
-                    &:hover{
-                        &:after{
-                            transform: translateX(10px);
-                        }
-                    }
-                }
-            }
-
-            p{
-                margin-bottom: 0;
-            }
         }
     }
 
@@ -282,6 +262,7 @@
         img{
             margin-top: $grid-gutter;
             width: 100%;
+            margin-bottom: -1px; //hide bad pixels
         }
     }
 }

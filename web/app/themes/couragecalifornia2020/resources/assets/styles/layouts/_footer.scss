@@ -42,4 +42,20 @@ footer.main-footer{
             }
         }
     }
+
+    // Newsletter form
+    .form-wrap{
+        input[type="text"]{
+            border-color: theme-color(white);
+            color: theme-color(white);
+
+            &::placeholder{
+                color: transparentize($color: #fff, $amount: .4);
+            }
+    
+            &:-internal-autofill-selected{
+                background-color: transparent!important;
+            }
+        }
+    }
 }

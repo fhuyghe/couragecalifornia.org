@@ -22,9 +22,9 @@
         <div class="text">
             @php the_content() @endphp
         </div>
-        <div class="image">
-            <img src="{!! $intro['image']['url'] !!}" />
-        </div>
+    </div>
+    <div class="image">
+        <img src="{!! $intro['image']['url'] !!}" />
     </div>
 </section>
 

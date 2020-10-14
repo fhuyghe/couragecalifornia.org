@@ -8,6 +8,10 @@ body{
     padding-top: $header-height; //Height of the header
 }
 
+.admin-bar .wrap{
+    padding-top: $header-height - 40;
+}
+
 h1, h2{
     font-family: 'Gilam', sans-serif;
 }
@@ -100,7 +104,6 @@ html.sr .reveal {
         flex: 1;
         max-width: 500px;
         width: 100%;
-        margin-bottom: 20px;
 
         &:focus{
             outline: 0;
@@ -115,11 +118,15 @@ html.sr .reveal {
         }
     }
 
+    p{
+        margin-bottom: 0;
+    }
+
     input[type="submit"]{
         background-color: theme-color(blue);
+        border: 2px solid theme-color(blue);
         color: theme-color(white);
         text-transform: uppercase;
-        border: 0;
         border-radius: 0;
         outline: 0;
         padding: 10px 20px;
