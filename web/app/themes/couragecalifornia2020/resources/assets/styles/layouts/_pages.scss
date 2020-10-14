@@ -139,6 +139,33 @@
         .success{
             display: none;
         }
+
+        .form-wrap{
+            input{
+                margin-bottom: 0;
+
+                &[type="submit"]{
+                    border: 2px solid theme-color(blue);
+
+                    &:after{
+                        content: "→";
+                        display: inline-block;
+                        padding-left: 10px;
+                        transition: .25s;
+                    }
+        
+                    &:hover{
+                        &:after{
+                            transform: translateX(10px);
+                        }
+                    }
+                }
+            }
+
+            p{
+                margin-bottom: 0;
+            }
+        }
     }
 
     #courageScore{
@@ -148,17 +175,22 @@
 
     #voterGuide{
         background: theme-color(yellow);
+        padding: 0;
 
-        h2{
-            color: theme-color(white);
-
-            span{
-                color: theme-color(black);
-            }
+        .row{
+            align-items: flex-end;
         }
 
-        .image{
-            margin-bottom: - $grid-gutter * 2;
+        .text{
+            padding: $grid-gutter * 2 0;
+
+            h2{
+                color: theme-color(white);
+    
+                span{
+                    color: theme-color(black);
+                }
+            }
         }
     }
 

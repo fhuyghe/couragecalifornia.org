@@ -36,9 +36,26 @@ a{
         color: theme-color(white);
         text-transform: uppercase;
         font-weight: 600;
+        transition: .25s;
 
         &:hover{
             text-decoration: none;
+            background-color: darken(theme-color(blue), 10%);
+        }
+
+        &.arrow{
+            &:after{
+                content: "→";
+                display: inline-block;
+                padding-left: 10px;
+                transition: .25s;
+            }
+
+            &:hover{
+                &:after{
+                    transform: translateX(10px);
+                }
+            }
         }
     }
 }

@@ -64,7 +64,7 @@
             <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 {!! $banner['text'] !!}
-                <a class="button" href="/courage-score">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
             </div>
             <div class="col-md-6 image">
                 <img src="{!! $banner['image']['url'] !!}" />
@@ -81,7 +81,7 @@
             <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 {!! $banner['text'] !!}
-                <a class="button" href="/courage-score">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
             </div>
             <div class="col-md-6 image">
                 <img src="{!! $banner['image']['url'] !!}" />
@@ -100,7 +100,7 @@
             </div>
             <div class="col-md-8 text">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
-                <a class="button" href="/courage-score">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
             </div>
         </div>
     </div>
