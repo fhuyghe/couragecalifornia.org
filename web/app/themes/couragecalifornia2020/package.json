@@ -77,6 +77,7 @@
   },
   "dependencies": {
     "bootstrap": "v4.3.1",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
     "jquery-parallax.js": "^1.5.0",
     "popper.js": "^1.14.7",

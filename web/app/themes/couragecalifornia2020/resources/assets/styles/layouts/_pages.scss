@@ -185,16 +185,41 @@
 
 // ACTIONS
 .page.actions{
+    .categories{
+        ul{
+            list-style: none;
+
+            li{
+                cursor: pointer;
+                text-transform: uppercase;
+                color: theme-color(yellow);
+            }
+        }
+    }
+
     #actions{
         padding-top: $grid-gutter;
 
+        .grid{
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+              }
+        }
+
+        .grid-sizer{
+            width: 33%;
+        }
+
         .article{
-            @extend .col-md-4;
+            width: 33%;
             margin-bottom: $grid-gutter;
+            float: left;
 
             &:first-child{
                 @extend .row;
-                @extend .col-md-12;
+                width: 100%;
                 
                 .thumbnail{
                     @extend .col-md-6;

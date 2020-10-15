@@ -1,6 +1,6 @@
 @php $categories = get_the_category($article->ID); @endphp
 
-<div class="article slide-up">
+<div class="article slide-up @foreach($categories as $category) cat-{{ $category->slug }}@endforeach">
     <div class="thumbnail">
         @if($loop->iteration == 1)
             {!! get_the_post_thumbnail($article->ID, 'large') !!}
