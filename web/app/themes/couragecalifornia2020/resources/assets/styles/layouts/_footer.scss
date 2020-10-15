@@ -28,6 +28,11 @@ footer.main-footer{
     }
 
     .right{
+        h3{
+            font-family: 'Gilam', sans-serif;
+            color: theme-color(yellow);
+        }
+
         ul{
             display: flex;
             
