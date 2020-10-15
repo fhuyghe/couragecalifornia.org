@@ -77,8 +77,10 @@
   },
   "dependencies": {
     "bootstrap": "v4.3.1",
+    "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
+    "jquery-bridget": "^2.0.1",
     "jquery-parallax.js": "^1.5.0",
     "popper.js": "^1.14.7",
     "scrollreveal": "^4.0.7"

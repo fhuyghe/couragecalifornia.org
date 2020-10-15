@@ -4598,6 +4598,13 @@ imagemin@^6.0.0:
     pify "^4.0.1"
     replace-ext "^1.0.0"
 
+imagesloaded@^4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/imagesloaded/-/imagesloaded-4.1.4.tgz#1376efcd162bb768c34c3727ac89cc04051f3cc7"
+  integrity sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA==
+  dependencies:
+    ev-emitter "^1.0.0"
+
 immutable@3.8.2, immutable@^3.7.6:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
@@ -5264,6 +5271,13 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
+jquery-bridget@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-bridget/-/jquery-bridget-2.0.1.tgz#784d17a85e641780c5d89ac3f8a7eb47b0bce1fc"
+  integrity sha1-eE0XqF5kF4DF2JrD+KfrR7C84fw=
+  dependencies:
+    jquery ">=1.4.2 <4"
+
 jquery-parallax.js@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/jquery-parallax.js/-/jquery-parallax.js-1.5.0.tgz#4d57f669db2374526bbb6fd595830cecadd3c71f"
@@ -5271,7 +5285,7 @@ jquery-parallax.js@^1.5.0:
   dependencies:
     jquery ">=1.7"
 
-jquery@>=1.7, jquery@^3.3.1:
+"jquery@>=1.4.2 <4", jquery@>=1.7, jquery@^3.3.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==

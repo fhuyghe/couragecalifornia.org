@@ -9,7 +9,7 @@
                 Categories
                 <ul>
                     @foreach ($categories as $cat)
-                <li data-filter="cat-{{ $cat->slug }}">{{ $cat->name }}</li>
+                <li data-filter=".cat-{{ $cat->slug }}">{{ $cat->name }}</li>
                     @endforeach
                 </ul>
             </div>
