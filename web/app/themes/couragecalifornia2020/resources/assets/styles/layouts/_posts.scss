@@ -1,0 +1,23 @@
+.single-press-release{
+    article{
+        header{
+            padding-top: $grid-gutter * 2;
+        }
+        
+        .entry-content{
+            padding: $grid-gutter * 2 0;
+        }
+
+        footer{
+            padding: $grid-gutter * 2 0;
+            position: relative;
+            background: theme-color(beige);
+
+            h3{
+                font-family: 'Gilam', sans-serif;
+                color: theme-color(yellow);
+                font-size: 1em;
+            }
+        }
+    }
+}
