@@ -165,7 +165,7 @@ function create_posttype() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'job'),
+            'rewrite' => array('slug' => 'jobs'),
             'show_in_rest' => true,
             'menu_icon' => 'dashicons-hammer',
         )
@@ -180,7 +180,7 @@ function create_posttype() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'press-release'),
+            'rewrite' => array('slug' => 'press-releases'),
             'show_in_rest' => true,
             'menu_icon' => 'dashicons-format-aside',
         )
