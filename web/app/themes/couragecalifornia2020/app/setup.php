@@ -170,6 +170,21 @@ function create_posttype() {
             'menu_icon' => 'dashicons-hammer',
         )
     );
+    
+    register_post_type( 'press-release',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Press Releases' ),
+                'singular_name' => __( 'Press Release' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'press-release'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-format-aside',
+        )
+    );
 }
 // Hooking up our function to theme setup
 add_action( 'init', __NAMESPACE__.'\\create_posttype' );
