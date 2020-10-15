@@ -267,6 +267,20 @@
     }
 }
 
+// Press Releases
+.page.press-releases{
+    .release{
+        margin-bottom: $grid-gutter;
+
+        time{
+            font-weight: 600;
+            color: theme-color(yellow);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+    }
+}
+
 // Article Blocks
 .article{
     .thumbnail{
