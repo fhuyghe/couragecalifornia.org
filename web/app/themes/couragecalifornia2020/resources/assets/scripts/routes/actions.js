@@ -20,6 +20,7 @@ export default {
       percentPosition: true,
       masonry: {
         columnWidth: '.grid-sizer',
+        gutter: 20,
       },
     });
     

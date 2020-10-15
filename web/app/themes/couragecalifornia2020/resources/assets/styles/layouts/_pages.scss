@@ -209,13 +209,19 @@
         }
 
         .grid-sizer{
-            width: 33%;
+            width: calc(33% - 20px);
         }
 
         .article{
-            width: 33%;
+            width: calc(33% - 20px);
             margin-bottom: $grid-gutter;
             float: left;
+
+            .thumbnail{
+                img{
+                    width: 100%;
+                }
+            }
 
             &:first-child{
                 @extend .row;
