@@ -188,3 +188,10 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', __NAMESPACE__.'\\create_posttype' );
+
+// Add options Page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}

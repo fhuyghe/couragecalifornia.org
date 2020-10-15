@@ -7,10 +7,12 @@
   </header>
   <div class="entry-content">
       <div class="container">
-    @php the_content() @endphp
+        @php the_content() @endphp
       </div>
-  </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+    </div>
+    <footer>
+      <div class="container">
+        <a class="button" href="/press-releases">Back to all Press Releases</a>
+      </div>
   </footer>
 </article>
