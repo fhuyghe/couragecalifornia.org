@@ -37,8 +37,12 @@ footer.main-footer{
             display: flex;
             
             li{
-                margin-right: 5px;
+                margin-right: 10px;
                 
+                &:first-child{
+                    display: none;
+                }
+
                 &:last-child{
                     flex: 1;
                     text-align: right;
