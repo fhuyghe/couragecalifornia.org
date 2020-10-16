@@ -33,6 +33,45 @@
             time{
                 color: theme-color(grey);
             }
+
+            //Social Warfare Logos
+            .swp_social_panel{
+                height: $grid-gutter;
+                justify-content: flex-start;
+                
+                .swp_share_button:not(.total_shares):not(.total_sharesalt){
+                    width: $grid-gutter;
+                    height: $grid-gutter;
+                    border-radius: $grid-gutter;
+                    border: 1px solid theme-color(grey);
+                    background: transparent!important;
+                    flex: 0 0 $grid-gutter!important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a{
+                        color: theme-color(black);
+                        background: transparent;
+
+                        .iconFiller{
+                            width: $grid-gutter!important;
+
+                            .spaceManWilly{
+                                width: auto;
+                            }
+
+                            .sw{
+                                float: none;
+                            }
+                        }
+
+                        .swp_share{
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
         
         .entry-content{

@@ -4,6 +4,7 @@
       {!! the_category() !!}
       <h1 class="entry-title">{!! get_the_title() !!}</h1>
       @include('partials/entry-meta')
+      {!! social_warfare() !!}
     </div>
   </header>
   <div class="entry-content">
