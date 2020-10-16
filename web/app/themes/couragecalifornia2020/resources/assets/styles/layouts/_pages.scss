@@ -100,41 +100,7 @@
     }
 
     #actions{
-        .article{
-            @extend .col-md-4;
-            margin-bottom: $grid-gutter;
-
-            .category{
-                color: theme-color(yellow);
-                text-transform: uppercase;
-                font-weight: 600;
-            }
-
-            .excerpt{
-                display: none;
-            }
-
-            .thumbnail{
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-
-            &:first-child{
-                @extend .col-md-12;
-                @extend .row;
-
-                .thumbnail,
-                .text{
-                    @extend .col-md-6;
-                }
-
-                .excerpt{
-                    display: block;
-                }
-            }
-        }
+        
     }
 
     #newsletter{
@@ -184,6 +150,7 @@
 
     #institute{
         background: theme-color(beige);
+        padding: $grid-gutter/ 2 0 0;
     }
 }
 
@@ -203,43 +170,6 @@
 
     #actions{
         padding-top: $grid-gutter;
-
-        .grid{
-            &:after {
-                content: '';
-                display: block;
-                clear: both;
-              }
-        }
-
-        .grid-sizer{
-            width: calc(33% - 20px);
-        }
-
-        .article{
-            width: calc(33% - 20px);
-            margin-bottom: $grid-gutter;
-            float: left;
-
-            .thumbnail{
-                img{
-                    width: 100%;
-                }
-            }
-
-            &:first-child{
-                @extend .row;
-                width: 100%;
-                
-                .thumbnail{
-                    @extend .col-md-6;
-                }
-
-                .text{
-                    @extend .col-md-6;
-                }
-            }
-        }
     }
 }
 
@@ -321,6 +251,43 @@
 }
 
 // Article Blocks
+.grid{
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .grid-sizer{
+        width: calc(33% - 20px);
+    }
+
+    .article{
+        width: calc(33% - 20px);
+        margin-bottom: $grid-gutter;
+        float: left;
+    
+        .thumbnail{
+            img{
+                width: 100%;
+            }
+        }
+    
+        &:first-child{
+            @extend .row;
+            width: 100%;
+            
+            .thumbnail{
+                @extend .col-md-6;
+            }
+    
+            .text{
+                @extend .col-md-6;
+            }
+        }
+    }
+}
+
 .article{
     .thumbnail{
         margin-bottom: $grid-gutter / 2;

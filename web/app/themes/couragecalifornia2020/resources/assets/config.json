@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/couragecalifornia2020",
+  "publicPath": "app/themes/couragecalifornia2020",
   "devUrl": "http://couragecalifornia.test",
   "proxyUrl": "http://localhost:3006/",
   "cacheBusting": "[name]_[hash:8]",

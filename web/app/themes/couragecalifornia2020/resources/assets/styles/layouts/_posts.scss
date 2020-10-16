@@ -38,6 +38,7 @@
             .swp_social_panel{
                 height: $grid-gutter;
                 justify-content: flex-start;
+                margin-bottom: 0!important;
                 
                 .swp_share_button:not(.total_shares):not(.total_sharesalt){
                     width: $grid-gutter;

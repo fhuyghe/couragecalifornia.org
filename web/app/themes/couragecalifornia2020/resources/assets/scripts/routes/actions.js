@@ -13,8 +13,8 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
 
-    setTimeout(() => {
-    let $grid = $('.grid');
+    //setTimeout(() => {
+    let $grid = $('.grid'); 
     $grid.isotope( {
       itemSelector: '.article',
       percentPosition: true,
@@ -35,6 +35,6 @@ export default {
         });
     });
       
-    }, 2000); // Making sure the dev is setup
+    //}, 2000); // Making sure the dev is setup
   },
 };

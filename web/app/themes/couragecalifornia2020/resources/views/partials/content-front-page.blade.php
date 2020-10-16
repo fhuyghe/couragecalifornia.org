@@ -32,12 +32,13 @@
 <section id="actions">
     <div class="container">
         <h2>Actions</h2>
-        <div class="row">
+        <div class="grid">
         @foreach ($latest_news as $article)
             @include('partials.article-block')
         @endforeach
-    </div>
-    <a class="button" href="/actions">Read More</a>
+        <div class="grid-sizer"></div>
+        </div>
+        <a class="button" href="/actions">Read More</a>
     </div>
 </section>
 
@@ -100,7 +101,7 @@
             </div>
             <div class="col-md-8 text">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
-                <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" target="_blank" href="https://couragecaliforniainstitute.org">{{ $banner['button_text'] }}</a>
             </div>
         </div>
     </div>
