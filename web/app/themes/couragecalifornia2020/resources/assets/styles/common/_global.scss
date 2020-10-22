@@ -36,12 +36,16 @@ a{
     &.button{
         display: inline-block;
         background-color: theme-color(blue);
-        padding: 1em 2em;
+        padding: 1em;
         color: theme-color(white);
         text-transform: uppercase;
         font-weight: 600;
         transition: .25s;
         border-radius: 0;
+        
+        @include media-breakpoint-up(md){
+            padding: 1em 2em;
+        }
 
         &:hover{
             text-decoration: none;
@@ -99,12 +103,15 @@ html.sr .reveal {
     input[type="text"]{
         border: 0;
         border: 2px solid black;
-        border-right: 0;
         background-color: transparent;
         padding: 10px 20px;
         flex: 1;
         max-width: 500px;
         width: 100%;
+
+        @include media-breakpoint-up(md){
+            border-right: 0;
+        }
 
         &:focus{
             outline: 0;
@@ -121,6 +128,11 @@ html.sr .reveal {
 
     p{
         margin-bottom: 0;
+        width: 100%;
+
+        @include media-breakpoint-up(md){
+            width: auto;
+        }
     }
 
     input[type="submit"]{

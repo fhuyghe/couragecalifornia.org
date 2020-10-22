@@ -11,7 +11,11 @@
         padding: $grid-gutter 0;
 
         section{
-            padding: $grid-gutter * 2 0;
+            padding: $grid-gutter 0;
+            
+            @include media-breakpoint-up(md){
+                padding: $grid-gutter * 2 0;
+            }
         }
     }
 }
@@ -58,12 +62,18 @@
         text-align: center;
 
         h1{
-            font-size: 3em;
+            font-size: 2em;
             max-width: 900px;
             margin: auto;
 
             span{
                 color: theme-color(yellow);
+            }
+        }
+
+        @include media-breakpoint-up(md){
+            h1{
+                font-size: 3em;
             }
         }
     }
@@ -85,11 +95,15 @@
         
         .text{
             font-family: 'Gilam', sans-serif;
-            font-size: 2.5em;
+            font-size: 1.5em;
             text-transform: uppercase;
             font-weight: 600;
             line-height: 1.2em;
             margin-bottom: $grid-gutter;
+
+            @include media-breakpoint-up(md){
+                font-size: 2.5em;
+            }
         }
 
         .image{
@@ -99,16 +113,12 @@
         }
     }
 
-    #actions{
-        
-    }
-
     #newsletter{
         background: theme-color(yellow);
         text-align: center;
 
-        background-size: contain;
-        background-position: right;
+        background-size: 50%;
+        background-position: left bottom;
         background-repeat: no-repeat;
 
         .text{
@@ -120,23 +130,38 @@
         .success{
             display: none;
         }
+
+        @include media-breakpoint-up(md){
+            background-size: contain;
+            background-position: right;
+        }
     }
 
     #courageScore{
         background: theme-color(black);
         color: theme-color(white);
+
+        .text{
+            margin-bottom: $grid-gutter;
+        }
+        
+        @include media-breakpoint-up(md){
+            .text{
+                margin-bottom: 0;
+            }
+        }
     }
 
     #voterGuide{
         background: theme-color(yellow);
-        padding: 0;
+        padding-bottom: 0;
 
         .row{
             align-items: flex-end;
         }
 
         .text{
-            padding: $grid-gutter * 2 0;
+            margin-bottom: $grid-gutter;
 
             h2{
                 color: theme-color(white);
@@ -146,11 +171,40 @@
                 }
             }
         }
+
+        @include media-breakpoint-up(md){
+            padding-top: 0;
+
+            .text{
+                margin-bottom: 0;
+                padding: $grid-gutter * 2 0;
+            }
+        }
     }
 
     #institute{
         background: theme-color(beige);
-        padding: $grid-gutter/ 2 0 0;
+        padding-bottom: 0;
+        
+        .row{
+            flex-flow: column-reverse;
+        }
+
+        .text{
+            margin-bottom: $grid-gutter;
+        }
+        
+        @include media-breakpoint-up(md){
+            padding: $grid-gutter/ 2 0 0;
+
+            .row{
+                flex-flow: row;
+            }
+
+            .text{
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -258,12 +312,23 @@
         clear: both;
     }
 
-    .grid-sizer{
-        width: calc(33% - 20px);
+    @include media-breakpoint-up(md){
+        .grid-sizer{
+            width: calc(33% - 20px);
+        }
+
+        .article{
+            width: calc(33% - 20px);
+
+            &:first-child{
+                .excerpt{
+                    display: block;
+                }
+            }
+        }
     }
 
     .article{
-        width: calc(33% - 20px);
         margin-bottom: $grid-gutter;
         float: left;
     
@@ -284,8 +349,13 @@
             .text{
                 @extend .col-md-6;
             }
+
+            .excerpt{
+                display: none;
+            }
         }
     }
+
 }
 
 .article{
