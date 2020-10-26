@@ -1,7 +1,8 @@
-<section id="top">
+<section id="top" style="background-image: url({{ $data['top_illustration']['url'] }});">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
+                <h1>{!! App::title() !!}</h1>
                 @php the_content() @endphp
             </div>
         </div>
@@ -18,8 +19,8 @@
                 <div class="portrait">
                     <img src="{{ get_the_post_thumbnail_url($person->ID) }}" />
                 </div>
-                <h3>{{ get_the_title($person->ID) }}</h3>
-                <h4>{{ $person->title }}</h4>
+                <h4>{{ get_the_title($person->ID) }}</h4>
+                <h5>{{ $person->title }}</h5>
             </div>
             @endforeach
             @endif
@@ -43,7 +44,7 @@
 
 @if($jobs)
 @php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
-<section id="jobs">
+<section id="jobs" style="background-image: url({{ $data['bottom_illustration']['url'] }});">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

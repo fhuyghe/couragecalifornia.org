@@ -68,7 +68,9 @@
       }
     }
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(xl){
+      z-index: 1;
+      transform: none;
       flex-flow: row;
       position: relative;
       width: auto;
@@ -83,6 +85,15 @@
         
         .nav{
           flex-flow: row;
+        }
+      }
+
+      .nav-secondary{
+        .nav{
+  
+          li:first-child{
+            width: auto;
+          }
         }
       }
     }
@@ -133,6 +144,10 @@
   
   &:hover{
     opacity: 1!important;
+  }
+
+  @include media-breakpoint-up(xl){
+    display: none;
   }
 
   .hamburger-inner,

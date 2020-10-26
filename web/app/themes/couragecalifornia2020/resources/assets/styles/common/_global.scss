@@ -5,7 +5,11 @@ body{
 
 .wrap{
     min-height: 100vh;
-    padding-top: $header-height; //Height of the header
+    padding-top: 60px;
+
+    @include media-breakpoint-up(md){
+        padding-top: $header-height; //Height of the header
+    }
 }
 
 .admin-bar .wrap{

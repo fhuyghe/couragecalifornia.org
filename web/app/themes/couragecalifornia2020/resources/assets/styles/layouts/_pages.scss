@@ -235,24 +235,89 @@
 
     #top{
         background: theme-color(yellow);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto 400px;
+        padding-bottom: 450px;
+        
+        @include media-breakpoint-up(md){
+            background-size: 50%;
+            padding-bottom: $grid-gutter * 2;
+
+            .illustration{
+                display: none;
+            }
+        }
     }
 
     #staff{
+        h2{
+            margin-bottom: $grid-gutter;
+        }
+
         .person{
+            margin-bottom: $grid-gutter / 2;
+
             .portrait{
+                height: 0;
+                padding-top: 100%;
+                background: theme-color(grey);
+                margin-bottom: 10px;
+
                 img{
                     max-width: 100%;
                 }
+            }
+
+            h4{
+                font-size: 1em;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            h5{
+                font-size: 1em;
+                font-style: italic;
+            }
+        }
+    }
+
+    #directors{
+
+        h3{
+            font-size: 1em;
+            font-weight: 600;
+            margin: $grid-gutter / 2 0;
+        }
+
+        .directors{
+            columns: 2;
+
+            p{
+                margin-bottom: 10px;
+            }
+
+            @include media-breakpoint-up(md){
+                columns: 3;
             }
         }
     }
 
     #jobs{
         background-color: theme-color(yellow);
-
+        background-repeat: no-repeat;
+        background-size: auto 400px;
+        background-position: right bottom;
+        padding-bottom: 450px;
+        
         .job{
             background: theme-color(white);
             padding: $grid-gutter / 2;
+        }
+        
+        @include media-breakpoint-up(md){
+            background-size: auto 80%;
+            padding-bottom: $grid-gutter;
         }
     }
 }
