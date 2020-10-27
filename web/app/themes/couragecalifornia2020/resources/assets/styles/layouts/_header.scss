@@ -107,20 +107,40 @@
 
     &.current-menu-item{
       a{
-        border-color: theme-color(white);
+        &:after{
+          width: 100%;
+          left: 0;
+        }
       }
     }
   
     a {
       @extend .nav-link;
-      border-bottom: 3px solid transparent;
       padding: 0;
       color: theme-color(white);
       text-transform: uppercase;
       font-weight: 600;
+      position: relative;
+      transition: .25s;
 
       &:hover{
         color: theme-color(yellow);
+
+        &:after{
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      &:after{
+        content: '';
+        height: 2px;
+        position: absolute;
+        width: 0%;
+        left: 50%;
+        bottom: -2px;
+        background: theme-color(white);
+        transition: .25s;
       }
     }
   }
