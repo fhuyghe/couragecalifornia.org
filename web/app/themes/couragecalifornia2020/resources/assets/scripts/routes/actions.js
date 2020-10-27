@@ -9,17 +9,19 @@ export default {
   init() {
     // JavaScript to be fired on the about us page
 
+  
+ 
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
 
-    //setTimeout(() => {
+    setTimeout(() => {
     let $grid = $('.grid'); 
     $grid.isotope( {
       itemSelector: '.article',
       percentPosition: true,
-      masonry: {
-        columnWidth: '.grid-sizer',
+      layoutMode: 'fitRows',
+      fitRows: {
         gutter: 20,
       },
     });
@@ -28,13 +30,22 @@ export default {
       $grid.isotope('layout');
     });
 
-    $('.categories ul li').click(function() {
-      var data = $(this).attr('data-filter');
-      $grid.isotope({
-          filter: data, // All grid items
-        });
+      $('.categories ul li').click(function () {
+        if ($(this).hasClass('active')) { 
+          $('.categories li').removeClass('active');
+          $grid.isotope({
+              filter: '*', // All grid items
+          });   
+        } else { 
+          $('.categories li').removeClass('active');
+          $(this).addClass('active');
+          var data = $(this).attr('data-filter');
+          $grid.isotope({
+              filter: data, // All grid items
+          });   
+        }
     });
       
-    //}, 2000); // Making sure the dev is setup
+    }, 2000); // Making sure the dev is setup
   },
 };

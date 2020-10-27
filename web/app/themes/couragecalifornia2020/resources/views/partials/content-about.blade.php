@@ -16,9 +16,9 @@
             @if($staff)
             @foreach ($staff as $person)
             <div class="col-md-3 person">
-                <div class="portrait">
+                {{-- <div class="portrait">
                     <img src="{{ get_the_post_thumbnail_url($person->ID) }}" />
-                </div>
+                </div> --}}
                 <h4>{{ get_the_title($person->ID) }}</h4>
                 <h5>{{ $person->title }}</h5>
             </div>

@@ -210,14 +210,35 @@
 
 // ACTIONS
 .page.actions{
+    .page-header{
+        padding-bottom: 0;
+    }
+    
     .categories{
+        position: relative;
+        text-align: right;
+
+        h4{
+            font-size: 1em;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        
         ul{
+            text-align: right;
             list-style: none;
+            background: theme-color(white);
 
             li{
                 cursor: pointer;
                 text-transform: uppercase;
-                color: theme-color(yellow);
+                display: inline-block;
+                color: theme-color(grey);
+                
+                &:hover,
+                &.active{
+                    color: theme-color(yellow);
+                }
             }
         }
     }
@@ -371,11 +392,6 @@
 
 // Article Blocks
 .grid{
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
 
     @include media-breakpoint-up(md){
         .grid-sizer{
@@ -395,11 +411,24 @@
 
     .article{
         margin-bottom: $grid-gutter;
-        float: left;
     
         .thumbnail{
+            height: 0;
+            padding-top: 60%;
+            overflow: hidden;
+            position: relative;
+
             img{
-                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: auto;
+                height: auto;
+                min-width: 100%;
+                min-height: 100%;
+                max-width: none;
             }
         }
     
@@ -408,11 +437,12 @@
             width: 100%;
             
             .thumbnail{
-                @extend .col-md-6;
+                @extend .col-md-8;
+                padding-top: 35%;
             }
     
             .text{
-                @extend .col-md-6;
+                @extend .col-md-4;
             }
 
             .excerpt{
@@ -425,7 +455,7 @@
 
 .article{
     .thumbnail{
-        margin-bottom: $grid-gutter / 2;
+        margin-bottom: 10px;
 
         img{
             height: auto;
@@ -443,7 +473,7 @@
     }
 
     .category{
-        font-size: 1em;
+        font-size: .9em;
         text-transform: uppercase;
         color: theme-color(yellow);
         font-weight: 600;
