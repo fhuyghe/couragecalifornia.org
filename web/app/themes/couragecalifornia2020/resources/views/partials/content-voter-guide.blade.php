@@ -8,7 +8,9 @@
                     <a class="button" href="https://progressivevotersguide.com/california">Voter Guide Website</a>
                 </div>
                 <div class="col-md-6 illustration">
-                    <img src="{{ get_field('top_illustration')['url'] }}" />
+                    @if($data['top_illustration'])
+                        <img src="{{ $data['top_illustration']['url'] }}" />
+                    @endif
                 </div>
             </div>
         </div>
@@ -19,5 +21,7 @@
     <div class="container">
         @php the_content() @endphp
     </div>
-    <img src="{{ get_field('bottom_illustration')['url'] }}" />
+    @if($data['bottom_illustration'])
+    <img src="{{ $data['bottom_illustration']['url'] }}" />
+    @endif
 </section>

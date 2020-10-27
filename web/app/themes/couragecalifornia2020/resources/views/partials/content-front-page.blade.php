@@ -32,13 +32,14 @@
 <section id="actions">
     <div class="container">
         <h2>Actions</h2>
-        <div class="grid">
+        <div class="grid row">
         @foreach ($latest_news as $article)
             @include('partials.article-block')
         @endforeach
-        <div class="grid-sizer"></div>
         </div>
-        <a class="button" href="/actions">Read More</a>
+        <footer>
+            <a class="button" href="/actions">Read More</a>
+        </footer>
     </div>
 </section>
 
@@ -50,7 +51,7 @@
             <h2>{!! $newsletter['title'] !!}</h2>
             {!! $newsletter['text'] !!}
         </div>
-        @include('partials.newsletter-signup')
+        @include('partials.newsletter-signup', ['buttonText' => "Count Me In   →"])
         <div class="success">
             {{ $newsletter['success_message']}}
         </div>

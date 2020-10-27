@@ -41,8 +41,9 @@ class App extends Controller
         } else {
             $copyright .= substr( $first_date, 0, 4 ) . "-" . date( 'Y' );
         }
+        $copyright .= ' ';
         $copyright .= get_bloginfo( 'name' );
-        $copyright .= 'All rights reserved.';
+        $copyright .= ' All rights reserved.';
         return $copyright;
     }
 }

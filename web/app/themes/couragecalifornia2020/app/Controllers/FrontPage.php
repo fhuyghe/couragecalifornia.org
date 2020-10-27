@@ -10,7 +10,7 @@ class FrontPage extends Controller
     public function latest_news() {
 	    $args = array(
 			'post_type' => 'post',
-	    	'posts_per_page' => 6,
+	    	'posts_per_page' => 4,
 	    );
 	    $the_query = new WP_Query( $args );
 	    return $the_query->posts;

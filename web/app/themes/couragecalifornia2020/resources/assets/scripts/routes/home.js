@@ -15,29 +15,13 @@ export default {
     $(window).on('scroll', function () { 
       if ($(window).scrollTop() > 50) {
         $('.top-banner').addClass('scrolled');
-      } else { 
+      } else {  
         $('.top-banner').removeClass('scrolled');
       }
     });
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
-
-    //setTimeout(() => {
-      // let $grid = $('.grid');
-      // $grid.isotope({
-      //   itemSelector: '.article',
-      //   percentPosition: true,
-      //   masonry: {
-      //     columnWidth: '.grid-sizer',
-      //     gutter: 20,
-      //   },
-      // });
-
-      // $grid.imagesLoaded(function () {
-      //   $grid.isotope('layout');
-      // });
-    //}, 5000);
 
   },
 };

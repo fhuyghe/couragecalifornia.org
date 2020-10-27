@@ -1,6 +1,7 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: 18px;
+    color: theme-color(black);
 }
 
 .wrap{
@@ -16,7 +17,12 @@ body{
     padding-top: $header-height - 40;
 }
 
-h1, h2{
+h1{
+    font-family: 'Gilam', sans-serif;
+    text-transform: uppercase;
+}
+
+h2{
     font-family: 'Gilam', sans-serif;
 }
 
@@ -40,16 +46,12 @@ a{
     &.button{
         display: inline-block;
         background-color: theme-color(blue);
-        padding: 1em;
+        padding: .5em 1em;
         color: theme-color(white);
         text-transform: uppercase;
         font-weight: 600;
         transition: .25s;
         border-radius: 0;
-        
-        @include media-breakpoint-up(md){
-            padding: 1em 2em;
-        }
 
         &:hover{
             text-decoration: none;
@@ -147,5 +149,6 @@ html.sr .reveal {
         border-radius: 0;
         outline: 0;
         padding: 10px 20px;
+        font-weight: 600;
     }
 }
