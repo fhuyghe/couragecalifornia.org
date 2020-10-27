@@ -284,7 +284,7 @@
 
     #staff{
         padding-bottom: 0;
-        
+
         h2{
             margin-bottom: $grid-gutter;
         }
@@ -352,6 +352,13 @@
         .job{
             background: theme-color(white);
             padding: $grid-gutter / 2;
+
+            h3{
+                font-family: 'Gilam', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                font-weight: 600;
+            }
         }
         
         @include media-breakpoint-up(md){
