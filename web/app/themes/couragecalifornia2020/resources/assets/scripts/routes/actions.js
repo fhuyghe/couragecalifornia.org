@@ -22,7 +22,7 @@ export default {
       percentPosition: true,
       layoutMode: 'fitRows',
       fitRows: {
-        gutter: 20,
+        gutter: 0,
       },
     });
     

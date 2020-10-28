@@ -2,11 +2,13 @@
 
 <div class="article slide-up @foreach($categories as $category) cat-{{ $category->slug }}@endforeach">
     <div class="thumbnail">
+        <a href="{{ get_the_permalink($article->ID) }}">
         @if($loop->iteration == 1)
             {!! get_the_post_thumbnail($article->ID, 'large') !!}
         @else
             {!! get_the_post_thumbnail($article->ID, 'medium') !!}
         @endif
+        </a>
     </div>
     <div class="text">
         <div class="category">
