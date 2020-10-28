@@ -32,7 +32,10 @@ img{
 
 #content{
     .container{
-        max-width: 800px;
+
+        @include media-breakpoint-up(lg){
+            max-width: 800px;
+        }
     }
 }
 
@@ -73,6 +76,10 @@ a{
             }
         }
     }
+}
+
+button:focus{
+    outline: 0;
 }
 
 //ScrollReveal

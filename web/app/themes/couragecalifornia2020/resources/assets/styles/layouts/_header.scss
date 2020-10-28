@@ -108,9 +108,15 @@
 
     &.current-menu-item{
       a{
+        color: theme-color(yellow);
+
         &:after{
           width: 100%;
           left: 0;
+        }
+
+        @include media-breakpoint-up(lg){
+          color: theme-color(white);
         }
       }
     }
@@ -139,16 +145,19 @@
         }
       }
 
-      &:after{
-        content: '';
-        height: 2px;
-        position: absolute;
-        width: 0%;
-        left: 50%;
-        bottom: -2px;
-        background: theme-color(white);
-        transition: .25s;
+      @include media-breakpoint-up(lg){
+        &:after{
+          content: '';
+          height: 2px;
+          position: absolute;
+          width: 0%;
+          left: 50%;
+          bottom: -2px;
+          background: theme-color(white);
+          transition: .25s;
+        }
       }
+
     }
   }
   }

@@ -272,7 +272,7 @@
         background-size: auto 400px;
         padding-bottom: 450px;
         
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             background-size: 50%;
             padding-bottom: $grid-gutter * 2;
 
@@ -361,7 +361,7 @@
             }
         }
         
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             background-size: auto 80%;
             padding-bottom: $grid-gutter;
         }

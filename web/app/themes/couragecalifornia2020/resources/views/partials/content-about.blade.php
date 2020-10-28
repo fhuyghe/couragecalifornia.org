@@ -1,7 +1,7 @@
 <section id="top" style="background-image: url({{ $data['top_illustration']['url'] }});">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h1>{!! App::title() !!}</h1>
                 @php the_content() @endphp
             </div>
