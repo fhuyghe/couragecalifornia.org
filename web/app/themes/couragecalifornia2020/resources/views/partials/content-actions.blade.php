@@ -27,5 +27,8 @@
             <div class="grid-sizer"></div>
         </div>
     @endif
+        <footer class="text-center">
+            <a class="button" id="loadMore">Load More</a>
+        </footer>
     </div>
 </section>

@@ -49,12 +49,18 @@ a{
     &.button{
         display: inline-block;
         background-color: theme-color(blue);
-        padding: .5em 1em;
         color: theme-color(white);
+        cursor: pointer;
+        padding: .5em 1em;
         text-transform: uppercase;
         font-weight: 600;
         transition: .25s;
         border-radius: 0;
+        
+        &:not([href]),
+        &:not([href]):hover{
+            color: theme-color(white);
+        }
 
         &:hover{
             text-decoration: none;
