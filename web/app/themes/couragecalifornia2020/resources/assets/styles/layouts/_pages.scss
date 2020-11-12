@@ -401,6 +401,28 @@
     }
 }
 
+// Courage Score
+.page.courage-score{
+    background-color: theme-color(black);
+
+    #intro{
+        color: theme-color(white);
+        text-align: center;
+    }
+
+    #methodology{
+        background-color: theme-color(white);
+    }
+    
+    #allstar{
+        background-color: theme-color(lightgrey);
+    }
+
+    #vote{
+        background-color: theme-color(white);
+    }
+}
+
 // Press Releases
 .page.press-releases{
     .release{
