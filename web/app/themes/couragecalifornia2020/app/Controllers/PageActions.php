@@ -10,7 +10,8 @@ class PageActions extends Controller
     public function actions() {
 	    $args = array(
 			'post_type' => 'post',
-	    	'posts_per_page' => -1,
+			'post_status' => 'publish',
+			'posts_per_page' => 10, 
 	    );
 	    $the_query = new WP_Query( $args );
 	    return $the_query->posts;
