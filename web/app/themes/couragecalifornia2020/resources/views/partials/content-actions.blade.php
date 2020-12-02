@@ -21,9 +21,21 @@
     <div class="container">
         @if($actions)
         <div class="row grid">
-            @foreach ($actions as $article)
-            @include('partials.article-block')
-            @endforeach
+            @php $article = $latestaction[0] @endphp
+            @php $hiddenID = $article->ID @endphp
+                @include('partials.article-block-featured')
+            <div class="row">
+                <div class="col-md-8">
+                    @foreach ($actions as $article)
+                        @if($hiddenID !== $article->ID)
+                            @include('partials.article-block')
+                        @endif
+                    @endforeach
+                    </div>
+                    <div class="col-md-4">
+                        Sidebar
+                    </div>
+                </div>
             <div class="grid-sizer"></div>
         </div>
     @endif
