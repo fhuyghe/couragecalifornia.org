@@ -455,6 +455,8 @@
 
     .article{
         margin-bottom: $grid-gutter;
+        padding-bottom: $grid-gutter;
+        border-bottom: 1px solid theme-color(grey);
     
         .thumbnail{
             height: 0;
@@ -475,8 +477,6 @@
         }
     
         &.featured{
-            @extend .row;
-            width: 100%;
             
             .thumbnail{
                 padding-top: 35%;
@@ -525,6 +525,7 @@
         text-transform: capitalize;
         font-size: 1.2em;
         font-weight: 600;
+        margin-bottom: 5px;
 
         a{
             color: theme-color(black);
@@ -541,10 +542,12 @@
 
     .excerpt{
         margin-bottom: 10px;
+        margin-top: $grid-gutter / 2;
     }
 
     .byline{
         margin-bottom: 0;
+        color: theme-color(grey);
     }
 
     time{

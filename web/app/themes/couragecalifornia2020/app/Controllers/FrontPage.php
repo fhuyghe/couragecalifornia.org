@@ -9,7 +9,8 @@ class FrontPage extends Controller
 {
     public function latest_news() {
 	    $args = array(
-			'post_type' => 'post',
+            'post_type' => 'post',
+            'cat' => -1, // No Press Releases
 	    	'posts_per_page' => 4,
 	    );
 	    $the_query = new WP_Query( $args );

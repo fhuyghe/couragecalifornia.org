@@ -10,9 +10,12 @@
   <div class="entry-content">
       <div class="container">
     @php the_content() @endphp
+        @if(in_category(7))
+        <div>
+          @php $link = get_post_meta(get_the_ID(), 'wpcf-field_ak_link_url', true) @endphp
+          <a href="{{ $link }}" target="_blank" class="button yellow arrow">Act Now</a>
+        </div>
+        @endif
       </div>
   </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
 </article>

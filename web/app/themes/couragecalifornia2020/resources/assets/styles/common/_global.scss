@@ -57,6 +57,10 @@ a{
         transition: .25s;
         border-radius: 0;
         
+        &.yellow{
+            background-color: theme-color(yellow);
+        }
+        
         &:not([href]),
         &:not([href]):hover{
             color: theme-color(white);

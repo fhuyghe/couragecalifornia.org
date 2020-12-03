@@ -6,12 +6,12 @@
                 @php the_content() @endphp
             </div>
             <div class="col-md-6 categories">
-                <h4>Categories</h4>
+                {{-- <h4>Categories</h4>
                 <ul>
                     @foreach ($categories as $cat)
                 <li data-filter=".cat-{{ $cat->slug }}">{{ $cat->name }}</li>
                     @endforeach
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>
@@ -21,22 +21,23 @@
     <div class="container">
         @if($actions)
         <div class="row grid">
-            @php $article = $latestaction[0] @endphp
-            @php $hiddenID = $article->ID @endphp
+
+            <div class="col-md-12">
+                @php $article = $latestaction[0] @endphp
+                @php $hiddenID = $article->ID @endphp
                 @include('partials.article-block-featured')
-            <div class="row">
-                <div class="col-md-8">
-                    @foreach ($actions as $article)
-                        @if($hiddenID !== $article->ID)
-                            @include('partials.article-block')
-                        @endif
-                    @endforeach
-                    </div>
-                    <div class="col-md-4">
-                        Sidebar
-                    </div>
-                </div>
-            <div class="grid-sizer"></div>
+            </div>
+
+            <div class="col-md-8">
+                @foreach ($actions as $article)
+                    @if($hiddenID !== $article->ID)
+                        @include('partials.article-block')
+                    @endif
+                @endforeach
+            </div>
+            <div class="col-md-4">
+                Sidebar
+            </div>
         </div>
     @endif
         <footer class="text-center">
