@@ -28,16 +28,17 @@
     </div>
 </section>
 
-{{-- ACTIONS --}}
+{{-- Engage --}}
 <section id="actions">
     <div class="container">
-        <h2>Actions</h2>
+        <h2>Engage</h2>
         <div class="row">
+            <div class="col-md-12">
+                @php $article = $data['featured_action'] @endphp
+                @include('partials.article-block-featured')
+            </div>
         @foreach ($latest_news as $article)
             @if($loop->iteration==1)
-                <div class="col-md-12">
-                    @include('partials.article-block-featured')
-                </div>
             @else
             <div class="col-md-4">
                 @include('partials.article-block-thumbnail')

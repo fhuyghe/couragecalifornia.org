@@ -14,10 +14,12 @@
 
 <div class="article featured slide-up @foreach($categories as $category) cat-{{ $category->slug }}@endforeach">
     <div class="row">
-        <div class="col-md-6 thumbnail">
+        <div class="col-md-6">
+            <div class="thumbnail">
             <a href="{{ $link }}" @if($newtab) target="_blank" @endif>
                 {!! get_the_post_thumbnail($article->ID, 'large') !!}
             </a>
+            </div>
         </div>
         <div class="col-md-6 text">
                 <div class="category">
