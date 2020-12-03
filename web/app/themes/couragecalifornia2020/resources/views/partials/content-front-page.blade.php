@@ -32,9 +32,17 @@
 <section id="actions">
     <div class="container">
         <h2>Actions</h2>
-        <div class="grid row">
+        <div class="row">
         @foreach ($latest_news as $article)
-            @include('partials.article-block')
+            @if($loop->iteration==1)
+                <div class="col-md-12">
+                    @include('partials.article-block-featured')
+                </div>
+            @else
+            <div class="col-md-4">
+                @include('partials.article-block-thumbnail')
+            </div>
+            @endif
         @endforeach
         </div>
         <footer>

@@ -4,7 +4,7 @@
 @if(in_category(6, $article))
     @php $link = get_field('link', $article->ID) @endphp
 @else
-    @if(in_category(6, $article))
+    @if(in_category(7, $article))
         @php $link = get_post_meta($article->ID, 'wpcf-field_ak_link_url', true) @endphp
     @else
         @php $newtab = false @endphp
