@@ -1,5 +1,10 @@
 <script src="https://act.couragecampaign.org/resources/actionkit.js"></script>
 <script type="text/javascript">actionkit.forms.initPage()</script>
+
+@if(!isset($buttonText))
+  @php $buttonText = 'Subscribe' @endphp
+@endif
+
     
 <form class="action_form newsletter-form" name="act" method="POST" action="https://act.couragecampaign.org/act/" accept-charset="utf-8">
   <div class="form-wrap">

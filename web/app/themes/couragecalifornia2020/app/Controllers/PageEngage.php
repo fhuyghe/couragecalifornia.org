@@ -5,7 +5,7 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 use WP_Query;
 
-class PageActions extends Controller
+class PageEngage extends Controller
 {
 
 	public function latestaction() {
@@ -17,6 +17,15 @@ class PageActions extends Controller
 	    );
 		$the_query = new WP_Query( $args );
 	    return $the_query->posts;
+	}
+
+	public function newsletter(){
+		$data = [];
+		$data['title'] = get_field('newsletter_title');
+		$data['text'] = get_field('newsletter_text');
+		$data['image'] = get_field('newsletter_image');
+
+		return $data;
 	}
 
     public function actions() {

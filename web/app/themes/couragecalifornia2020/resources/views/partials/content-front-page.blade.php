@@ -29,7 +29,7 @@
 </section>
 
 {{-- Engage --}}
-<section id="actions">
+<section id="engage">
     <div class="container">
         <h2>Engage</h2>
         <div class="row">
@@ -38,16 +38,13 @@
                 @include('partials.article-block-featured')
             </div>
         @foreach ($latest_news as $article)
-            @if($loop->iteration==1)
-            @else
             <div class="col-md-4">
                 @include('partials.article-block-thumbnail')
             </div>
-            @endif
         @endforeach
         </div>
         <footer>
-            <a class="button" href="/actions">Read More</a>
+            <a class="button" href="/engage">Read More</a>
         </footer>
     </div>
 </section>

@@ -26,6 +26,11 @@ h2{
     font-family: 'Gilam', sans-serif;
 }
 
+h3{
+    font-family: 'Gilam', sans-serif;
+    font-weight: 600;
+}
+
 img{
     max-width: 100%;
 }
@@ -51,6 +56,9 @@ a{
         background-color: theme-color(blue);
         color: theme-color(white);
         cursor: pointer;
+        outline: 0;
+        border: 0;
+        box-shadow: 0;
         padding: .5em 1em;
         text-transform: uppercase;
         font-weight: 600;
@@ -167,5 +175,15 @@ html.sr .reveal {
         outline: 0;
         padding: 10px 20px;
         font-weight: 600;
+    }
+}
+
+.posts-navigation{
+    padding: $grid-gutter 0;
+    text-align: center;
+
+    a{
+        color: theme-color(yellow);
+        text-transform: uppercase;
     }
 }

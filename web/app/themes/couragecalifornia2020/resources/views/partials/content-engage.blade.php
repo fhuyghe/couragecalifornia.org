@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<section id='actions'>
+<section id='articles'>
     <div class="container">
         @if($actions)
         <div class="row grid">
@@ -36,7 +36,12 @@
                 @endforeach
             </div>
             <div class="col-md-4">
-                Sidebar
+                <div class="newsletter-widget">
+                    <img src="{{ $newsletter['image']['url'] }}" />
+                    <h3>{{ $newsletter['title'] }}</h3>
+                    <p>{{ $newsletter['text'] }}</p>
+                    @include('partials/newsletter-signup')
+                </div>
             </div>
         </div>
     @endif
