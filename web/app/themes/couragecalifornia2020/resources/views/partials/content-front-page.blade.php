@@ -55,7 +55,7 @@
     <div class="container">
         <div class="text">
             <h2>{!! $newsletter['title'] !!}</h2>
-            {!! $newsletter['text'] !!}
+            <p>{!! $newsletter['text'] !!}</p>
         </div>
         @include('partials.newsletter-signup', ['buttonText' => "Count Me In   →"])
         <div class="success">
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
-                {!! $banner['text'] !!}
+                <p>{!! $banner['text'] !!}</p>
                 <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
             </div>
             <div class="col-md-6 image">
@@ -88,7 +88,7 @@
         <div class="row">
             <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
-                {!! $banner['text'] !!}
+                <p>{!! $banner['text'] !!}</p>
                 <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
             </div>
             <div class="col-md-6 image">

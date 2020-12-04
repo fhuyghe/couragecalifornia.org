@@ -1,4 +1,4 @@
-<section id="intro">
+<section id="intro" style="background-image: url({{ $data['top_background']['url'] }});">
     <div class="container">
         <h1>{!! App::title() !!}</h1>
         {!! the_content() !!}
@@ -8,7 +8,7 @@
 
  {{-- Methodology--}}
  @php $section = $data['methodology'] @endphp
- <section id="methodology" class="banner">
+ <section id="methodology" class="banner bottom-image">
     <div class="container">
         <div class="row">
             <div class="col-md-6 image">
@@ -46,7 +46,7 @@
 
  {{-- Vote --}}
  @php $section = $data['vote'] @endphp
- <section id="vote" class="banner">
+ <section id="vote" class="banner  bottom-image">
     <div class="container">
         <div class="row">
             <div class="col-md-6 image">

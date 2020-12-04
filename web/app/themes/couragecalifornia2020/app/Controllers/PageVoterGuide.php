@@ -11,6 +11,7 @@ class PageVoterGuide extends Controller
         $data = [];
 		$data['top_illustration'] = get_field('top_illustration');
 		$data['bottom_illustration'] = get_field('bottom_illustration');
+		$data['blue'] = get_field('blue');
 
         return $data;
     }

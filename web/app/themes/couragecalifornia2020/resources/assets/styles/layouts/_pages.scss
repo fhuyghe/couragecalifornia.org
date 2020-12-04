@@ -16,6 +16,22 @@
             @include media-breakpoint-up(md){
                 padding: $grid-gutter * 2 0;
             }
+
+            //Banners
+            &.banner{
+                &.bottom-image{
+                    padding-bottom: 0;
+
+                    .row{
+                        align-items: flex-end;
+                    }
+
+                    .text{
+                        padding-bottom: $grid-gutter;
+                        align-self: center;
+                    }
+                }
+            }
         }
     }
 }
@@ -424,6 +440,21 @@
         .illustration{
             display: flex;
             align-items: flex-end;
+            justify-content: center;
+        }
+    }
+
+    #blue{
+        background: theme-color(blue);
+        color: theme-color(white);
+
+        .row{
+            margin-bottom: $grid-gutter;
+            align-items: center;
+
+            &:nth-child(2n){
+                flex-flow: row-reverse;
+            }
         }
     }
 
@@ -445,6 +476,16 @@
     #intro{
         color: theme-color(white);
         text-align: center;
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: auto 100%;
+        display: flex;
+        align-items: flex-end;
+
+        .container{
+            max-width: 800px;
+        }
     }
 
     #methodology{
