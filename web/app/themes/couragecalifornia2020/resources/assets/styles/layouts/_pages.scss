@@ -427,20 +427,23 @@
         padding: 0;
     }
 
-    #intro{
-        background: theme-color(black);
-        color: theme-color(white);
-        padding: 0;
+    #top{
+        background: theme-color(yellow);
+        position: relative;
 
-        .text{
-            padding-top: $grid-gutter * 2;
-            padding-bottom: $grid-gutter * 2;
+        p{
+            max-width: 50%;
+            margin: auto;
+            margin-bottom: $grid-gutter;
         }
 
-        .illustration{
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
+        img{
+            position: absolute;
+            right: 75%;
+            bottom: 0;
+            height: 80%;
+            max-height: 300px;
+            width: auto;
         }
     }
 
@@ -458,8 +461,24 @@
         }
     }
 
-    #content{
+    #intro{
+        .subtitle{
+            color: theme-color(blue);
+        }
+    }
+
+    #partners{
+        background: theme-color(lightgrey);
+
+        .list{
+            columns: 3;
+        }
+    }
+    
+    #bottom{
         padding-bottom: 0;
+        background: theme-color(blue);
+        color: theme-color(white);
 
         img{
             margin-top: $grid-gutter;
