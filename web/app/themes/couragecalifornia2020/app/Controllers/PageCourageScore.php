@@ -13,6 +13,7 @@ class PageCourageScore extends Controller
 		$data['methodology'] = get_field('methodology');
 		$data['allstar'] = get_field('allstar');
 		$data['vote'] = get_field('vote');
+		$data['partners'] = get_field('partners');
 
         return $data;
     }

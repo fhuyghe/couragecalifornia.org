@@ -62,3 +62,17 @@
         </div>
     </div>
 </section>
+
+{{-- Partners --}}
+@if(isset($data['partners']))
+    @php $section = $data['partners'] @endphp
+    <section id="partners">
+        <div class="container">
+            <h2>{{ $section['title'] }}</h2>
+            {!! $section['text'] !!}
+            <div class="list">
+                {!! $section['list'] !!}
+            </div>
+        </div>
+    </section>
+@endif

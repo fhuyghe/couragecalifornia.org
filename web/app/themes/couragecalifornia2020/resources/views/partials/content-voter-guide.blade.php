@@ -41,7 +41,7 @@
     </div>
 </section>
 
-@if($data['partners'])
+@if(isset($data['partners']))
     @php $section = $data['partners'] @endphp
     <section id="partners">
         <div class="container">
@@ -54,7 +54,7 @@
     </section>
 @endif
 
-@if($data['equity'])
+@if(isset($data['equity']))
     @php $section = $data['equity'] @endphp
     <section id="equity">
         <div class="container">
@@ -71,7 +71,7 @@
     </section>
 @endif
 
-@if($data['institute'])
+@if(isset($data['institute']))
     @php $section = $data['institute'] @endphp
     <section id="bottom" class="text-center">
         <div class="container">

@@ -491,7 +491,7 @@
 // Courage Score
 .page.courage-score{
     background-color: theme-color(black);
-
+    
     #intro{
         color: theme-color(white);
         text-align: center;
@@ -517,6 +517,14 @@
 
     #vote{
         background-color: theme-color(white);
+    }
+
+    #partners{
+        background-color: theme-color(lightgrey);
+
+        .list{
+            columns: 3;
+        }
     }
 }
 
