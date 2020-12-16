@@ -277,10 +277,15 @@
         padding-top: $grid-gutter / 2;
 
     }
-            
-    button.alm-load-more-btn{
-        @extend a.button;
+
+    .alm-btn-wrap{
+        text-align: center;
+        
+        button.alm-load-more-btn{
+            @extend a.button;
+        }
     }
+            
 
     .newsletter-widget{
         background: theme-color(white);

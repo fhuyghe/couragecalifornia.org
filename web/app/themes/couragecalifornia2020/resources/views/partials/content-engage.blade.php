@@ -34,7 +34,23 @@
                         @include('partials.article-block')
                     @endif
                 @endforeach
+
+                <div class="load-more">
+                    @php
+                    $args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => '6',
+                        'button_label' => 'Show More Posts',
+                        'button_loading_label' => 'Loading...',
+                        'scroll' => 'false'
+                    );	
+                    if(function_exists('alm_render')){
+                        alm_render($args);
+                    }
+                    @endphp
+                </div>
             </div>
+
             <div class="col-md-4">
                 <div class="newsletter-widget">
                     <img src="{{ $newsletter['image']['url'] }}" />
@@ -46,18 +62,7 @@
         </div>
     @endif
         <footer class="text-center">
-            @php
-            $args = array(
-                'post_type' => 'post',
-                'posts_per_page' => '6',
-                'button_label' => 'Show More Posts',
-                'button_loading_label' => 'Loading...',
-                'scroll' => 'false'
-            );	
-            if(function_exists('alm_render')){
-                alm_render($args);
-            }
-            @endphp
+           
         </footer>
     </div>
 </section>
