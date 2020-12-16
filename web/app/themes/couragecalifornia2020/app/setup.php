@@ -152,7 +152,7 @@ function create_posttype() {
             'rewrite' => array('slug' => 'staff'),
             'show_in_rest' => true,
             'menu_icon' => 'dashicons-businessperson',
-            'supports' => array( 'title', 'thumbnail' ),
+            'supports' => array( 'title', 'thumbnail', 'editor' ),
         )
     );
     
