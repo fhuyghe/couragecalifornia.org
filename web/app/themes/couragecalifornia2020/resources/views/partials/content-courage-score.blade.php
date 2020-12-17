@@ -2,7 +2,7 @@
     <div class="container">
         <h1>{!! App::title() !!}</h1>
         {!! the_content() !!}
-        <a class="button" href="https://couragescore.com">Courage Score Website</a>
+        <a class="button arrow" href="https://couragescore.com">Courage Score Website</a>
     </div>
 </section>
 

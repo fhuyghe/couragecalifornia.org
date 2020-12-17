@@ -53,13 +53,15 @@ a{
 
     &.button{
         display: inline-block;
+        font-family: 'Gilam', sans-serif;
+        font-size: .9em;
         background-color: theme-color(blue);
         color: theme-color(white);
         cursor: pointer;
         outline: 0;
         border: 0;
         box-shadow: 0;
-        padding: .5em 1em;
+        padding: 15px 25px;
         text-transform: uppercase;
         font-weight: 600;
         transition: .25s;

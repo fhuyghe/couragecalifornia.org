@@ -73,10 +73,12 @@
 
 @if(isset($data['institute']))
     @php $section = $data['institute'] @endphp
-    <section id="bottom" class="text-center">
+    <section id="bottom">
         <div class="container">
-            <h2>{{ $section['title'] }}</h2>
-            {!! $section['text'] !!}
+            <h2 class="text-center">{{ $section['title'] }}</h2>
+            <div class="text">
+                {!! $section['text'] !!}
+            </div>
         </div>
         @if($data['bottom_illustration'])
             <img src="{{ $data['bottom_illustration']['url'] }}" />

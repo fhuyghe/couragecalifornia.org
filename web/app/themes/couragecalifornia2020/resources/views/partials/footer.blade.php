@@ -9,7 +9,7 @@
       </div>
       <div class="col-md-6 right">
         <h3>Get updates from Courage</h3>
-        @include('partials.newsletter-signup', ['buttonText' => "→"])
+        @include('partials.newsletter-signup', ['buttonText' => "Subscribe  →"])
         @php dynamic_sidebar('right-footer') @endphp
       </div>
     </div>

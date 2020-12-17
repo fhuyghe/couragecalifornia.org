@@ -19,7 +19,10 @@
                 {{-- <div class="portrait">
                     <img src="{{ get_the_post_thumbnail_url($person->ID) }}" />
                 </div> --}}
-                <h4>{{ get_the_title($person->ID) }}</h4>
+                <a class="name" href="{{ get_permalink($person) }}">
+                    <h4>{{ get_the_title($person->ID) }}</h4>
+                    <div class="plus">+</div>
+                </a>
                 <h5>{{ $person->title }}</h5>
             </div>
             @endforeach
@@ -42,7 +45,14 @@
     </div>
 </section>
 
-@if($jobs)
+{{-- Legal Information --}}
+<section id="legal">
+    <div class="container">
+        {!! $data['legal_information'] !!}
+    </div>
+</section>
+
+{{-- @if($jobs)
 @php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
 <section id="jobs" style="background-image: url({{ $data['bottom_illustration']['url'] }});">
     <div class="container">
@@ -59,4 +69,4 @@
         </div>
     </div>
 </section>
-@endif
+@endif --}}

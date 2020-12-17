@@ -33,15 +33,15 @@
     <div class="container">
         <h2>Engage</h2>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8 action">
                 @php $article = $data['featured_action'] @endphp
-                @include('partials.article-block-featured')
-            </div>
-        @foreach ($latest_news as $article)
-            <div class="col-md-4">
                 @include('partials.article-block-thumbnail')
             </div>
-        @endforeach
+            <div class="col-md-4 latest">
+                @foreach ($latest_news as $article)
+                    @include('partials.article-block-landing')
+                @endforeach
+            </div>
         </div>
         <footer>
             <a class="button" href="/engage">Read More</a>

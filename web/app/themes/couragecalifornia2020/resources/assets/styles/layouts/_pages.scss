@@ -134,6 +134,18 @@
             text-align: center;
             margin-top: $grid-gutter;
         }
+
+        .latest{
+            .article{
+                border-bottom: 1px solid theme-color(darkgrey);
+                padding-bottom: $grid-gutter / 2;
+
+                &:last-child{
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
     }
 
     #newsletter{
@@ -280,7 +292,7 @@
 
     .alm-btn-wrap{
         text-align: center;
-        
+
         button.alm-load-more-btn{
             @extend a.button;
         }
@@ -363,20 +375,32 @@
             //     }
             // }
 
-            h4{
-                font-size: 1em;
-                font-weight: 600;
-                margin-bottom: 0px;
+            .name{
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                
+                h4{
+                    font-size: 1em;
+                    font-weight: 600;
+                    margin-bottom: 0px;
+                }
+
+                .plus{
+                    color: theme-color(darkgrey);
+                    margin-left: 10px;
+                }
             }
+
 
             h5{
                 font-size: 1em;
-                font-style: italic;
             }
         }
     }
 
     #directors{
+        padding-bottom: $grid-gutter;
 
         h3{
             font-size: 1em;
@@ -401,29 +425,38 @@
         }
     }
 
-    #jobs{
-        background-color: theme-color(yellow);
-        background-repeat: no-repeat;
-        background-size: auto 400px;
-        background-position: right bottom;
-        padding-bottom: 450px;
-        
-        .job{
-            background: theme-color(white);
-            padding: $grid-gutter / 2;
+    #legal{
+        padding-top: 0;
 
-            h3{
-                font-family: 'Gilam', sans-serif;
-                text-transform: uppercase;
-                font-size: 1.2em;
-            }
-        }
-        
-        @include media-breakpoint-up(lg){
-            background-size: auto 80%;
-            padding-bottom: $grid-gutter;
+        .container{
+            border-top: 1px solid theme-color(grey);
+            padding-top: $grid-gutter;
         }
     }
+
+    // #jobs{
+    //     background-color: theme-color(yellow);
+    //     background-repeat: no-repeat;
+    //     background-size: auto 400px;
+    //     background-position: right bottom;
+    //     padding-bottom: 450px;
+        
+    //     .job{
+    //         background: theme-color(white);
+    //         padding: $grid-gutter / 2;
+
+    //         h3{
+    //             font-family: 'Gilam', sans-serif;
+    //             text-transform: uppercase;
+    //             font-size: 1.2em;
+    //         }
+    //     }
+        
+    //     @include media-breakpoint-up(lg){
+    //         background-size: auto 80%;
+    //         padding-bottom: $grid-gutter;
+    //     }
+    // }
 }
 
 //Voter Guide
@@ -477,6 +510,16 @@
 
         .list{
             columns: 3;
+            font-style: italic;
+            font-size: .9em;
+        }
+    }
+
+    #equity{
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
     
@@ -484,6 +527,11 @@
         padding-bottom: 0;
         background: theme-color(blue);
         color: theme-color(white);
+
+        .text{
+            margin: auto;
+            max-width: 800px;
+        }
 
         img{
             margin-top: $grid-gutter;
@@ -496,6 +544,10 @@
 // Courage Score
 .page.courage-score{
     background-color: theme-color(black);
+
+    h2{
+        text-transform: uppercase;
+    }
     
     #intro{
         color: theme-color(white);
@@ -529,6 +581,8 @@
 
         .list{
             columns: 3;
+            font-size: .9em;
+            font-style: italic;
         }
     }
 }
