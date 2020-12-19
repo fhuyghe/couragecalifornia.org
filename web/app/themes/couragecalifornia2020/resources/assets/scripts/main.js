@@ -8,7 +8,7 @@ import './autoload/**/*'
 import Router from './util/Router';
 import common from './routes/common'; 
 import home from './routes/home';
-import aboutUs from './routes/about';
+import about from './routes/about';
 import actions from './routes/actions';
 
 /** Populate Router instance with DOM routes */
@@ -18,7 +18,7 @@ const routes = new Router({
   // Home page
   home,
   // About Us page, note the change from about-us to aboutUs.
-  aboutUs,
+  about,
   actions,
 });
 

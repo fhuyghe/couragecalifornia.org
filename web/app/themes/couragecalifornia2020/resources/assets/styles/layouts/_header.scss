@@ -189,9 +189,14 @@
     display: none;
   }
 
+  .hamburger-box{
+    width: 30px;
+  }
+
   .hamburger-inner,
   .hamburger-inner:after,
   .hamburger-inner:before{
+    width: 30px;
     background-color: theme-color(white)!important;
   }
 }

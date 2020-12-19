@@ -1,6 +1,5 @@
 <section id="intro" style="background-image: url({{ $data['top_background']['url'] }});">
-    <div class="container">
-        <h1>{!! App::title() !!}</h1>
+    <div class="container text-center">
         {!! the_content() !!}
         <a class="button arrow" href="https://couragescore.com">Courage Score Website</a>
     </div>

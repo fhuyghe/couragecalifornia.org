@@ -11,19 +11,24 @@
 
 <section id="staff">
     <div class="container">
-        <h2 class="text-center">Staff</h2>
+        <h2>Staff</h2>
         <div class="row">
             @if($staff)
             @foreach ($staff as $person)
-            <div class="col-md-3 person">
-                {{-- <div class="portrait">
-                    <img src="{{ get_the_post_thumbnail_url($person->ID) }}" />
-                </div> --}}
-                <a class="name" href="{{ get_permalink($person) }}">
+            <div class="col-md-4 person">
+                <div class="name @if($person->post_content)with-bio @endif">
                     <h4>{{ get_the_title($person->ID) }}</h4>
-                    <div class="plus">+</div>
-                </a>
+                    @if($person->post_content)
+                        <div class="plus">+</div>
+                    @endif
+                </div>
                 <h5>{{ $person->title }}</h5>
+
+                @if($person->post_content)
+                    <div class="bio">
+                        {!! apply_filters( 'the_content', $person->post_content ); !!}
+                    </div>
+                @endif
             </div>
             @endforeach
             @endif

@@ -61,6 +61,17 @@ footer.main-footer{
         ul{
             display: flex;
             margin: 5px 0 0;
+            flex-flow: row-reverse;
+
+            @include media-breakpoint-up(md){
+                flex-flow: row;
+
+                li{
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
             
             li{
                 margin-right: 10px;
@@ -71,7 +82,6 @@ footer.main-footer{
 
                 &:last-child{
                     flex: 1;
-                    text-align: right;
                     margin-right: 0;
                 }
             }

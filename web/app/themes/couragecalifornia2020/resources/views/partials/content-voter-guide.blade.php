@@ -29,13 +29,13 @@
     <div class="container">
         @foreach($data['blue'] as $banner)
             <div class="row">
-            <div class="col-md-6">
-                <h3>{{ $banner['title'] }}</h3>
-                <p>{{ $banner['text'] }}</p>
-            </div>
-            <div class="col-md-6">
-                <img src="{{ $banner['image']['url'] }}" />
-            </div>
+                <div class="col-md-6">
+                    <h3>{{ $banner['title'] }}</h3>
+                    <p>{{ $banner['text'] }}</p>
+                </div>
+                <div class="col-md-6 image">
+                    <img src="{{ $banner['image']['url'] }}" />
+                </div>
             </div>
         @endforeach
     </div>

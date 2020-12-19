@@ -1,8 +1,12 @@
 .page-header{
-        padding: $grid-gutter 0;
+        padding: 0 0 $grid-gutter;
 
         h1{
             font-weight: 600;
+        }
+
+        @include media-breakpoint-up(md){
+            padding: $grid-gutter 0;
         }
 }
     
@@ -62,6 +66,14 @@
         }
     }
 
+    h2{
+        font-size: 2em;
+        
+        @include media-breakpoint-up(md){
+            font-size: 2.2em;
+        }
+    }
+
     .banner{
         .row{
             align-items: center;
@@ -103,9 +115,14 @@
             margin-bottom: $grid-gutter;
             
             svg{
-                height: $grid-gutter;
-                width: $grid-gutter;
+                height: $grid-gutter /2;
+                width: $grid-gutter /2;
                  fill: theme-color(white);
+
+                 @include media-breakpoint-up(md){
+                    height: $grid-gutter;
+                    width: $grid-gutter;
+                 }
             }
         }
         
@@ -126,13 +143,43 @@
             img{
                 width: 100%;
             }
+
+            .desktop{
+                display: none;
+            }
+
+            @include media-breakpoint-up(md){
+                .desktop{
+                    display: block;
+                }
+
+                .mobile{
+                    display: none;
+                }
+            }
         }
+
     }
 
     #engage{
         footer{
             text-align: center;
             margin-top: $grid-gutter;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: $grid-gutter;
+        }
+
+        .action{
+            .row{
+                flex-flow: column;
+
+                .col-md-6{
+                    max-width: 100%;
+                }
+            }
         }
 
         .latest{
@@ -157,8 +204,6 @@
 
     #newsletter{
         background: theme-color(yellow);
-        text-align: center;
-
         background-size: 0; //50%;
         background-position: left bottom;
         background-repeat: no-repeat;
@@ -171,7 +216,7 @@
 
         input[type="text"]{
             background: theme-color(white);
-            border-bottom: 0;
+            border-color: theme-color(white);
         }
         
         input[type="submit"]{
@@ -186,8 +231,10 @@
             background-size: contain;
             background-position: right;
 
+            text-align: center;
+
             input[type="text"]{
-                border-bottom: 2px solid theme-color(black);
+                border-bottom: 2px solid theme-color(white);
             }
 
             input[type="submit"]{
@@ -199,6 +246,7 @@
     #courageScore{
         background: theme-color(black);
         color: theme-color(white);
+        padding: 100px 0;
 
         .text{
             margin-top: $grid-gutter;
@@ -221,7 +269,7 @@
 
     #voterGuide{
         background: theme-color(yellow);
-        padding-bottom: 0;
+        padding: 100px 0 0;
 
         .row{
             align-items: flex-end;
@@ -237,6 +285,10 @@
                     color: theme-color(black);
                 }
             }
+        }
+
+        .image{
+            text-align: center;
         }
 
         img{
@@ -264,7 +316,7 @@
 
     #institute{
         background: theme-color(beige);
-        padding-bottom: 0;
+        padding: 100px 0 0;
         
         .row{
             flex-flow: column-reverse;
@@ -272,6 +324,14 @@
 
         .text{
             margin-bottom: $grid-gutter;
+
+            h2{
+                margin-bottom: $grid-gutter / 2;
+            }
+        }
+
+        .image{
+            text-align: center;
         }
 
         img{
@@ -348,9 +408,32 @@
             
 
     .newsletter-widget{
-        background: theme-color(white);
-        padding: 20px;
         text-align: center;
+
+        .inner{
+            background: theme-color(white);
+            padding: 20px;
+        }
+
+        &.desktop{
+            display: none;
+        }
+
+        &.mobile{
+            padding-bottom: $grid-gutter;
+            margin-bottom: $grid-gutter;
+            border-bottom: 1px solid theme-color(grey);
+        }
+
+        @include media-breakpoint-up(md){
+            &.desktop{
+                display: block;
+            }
+
+            &.mobile{
+                display: none;
+            }
+        }
 
         img{
             max-height: 70px;
@@ -405,28 +488,22 @@
     #staff{
         padding-bottom: 0;
 
-        h2{
-            margin-bottom: $grid-gutter;
-        }
-
         .person{
             margin-bottom: $grid-gutter / 2;
-
-            // .portrait{
-            //     height: 0;
-            //     padding-top: 100%;
-            //     background: theme-color(grey);
-            //     margin-bottom: 10px;
-
-            //     img{
-            //         max-width: 100%;
-            //     }
-            // }
+            position: relative;
 
             .name{
                 display: flex;
                 align-items: center;
-                margin-bottom: 5px;
+                margin-bottom: 0px;
+
+                &:hover{
+                    color: theme-color(blue);
+                }
+
+                &.with-bio{
+                    cursor: pointer;
+                }
                 
                 h4{
                     font-size: 1em;
@@ -443,6 +520,26 @@
 
             h5{
                 font-size: 1em;
+                font-style: italic;
+            }
+
+            .bio{
+                display: none;
+                
+                @include media-breakpoint-up(md){
+                    padding: 20px;
+                    background-color: theme-color(black);
+                    color: theme-color(white);
+                    position: absolute;
+                    z-index: 99;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+                }
+            }
+
+            &.active{
+                .bio{
+                    display: block;
+                }
             }
         }
     }
@@ -516,29 +613,33 @@
     #top{
         background: theme-color(yellow);
         position: relative;
+        padding-bottom: 0;
+
+        .button{
+            margin-bottom: $grid-gutter;
+        }
+        
+        img{
+            max-height: 300px;
+        }
 
         p{
             margin-bottom: $grid-gutter / 2;
         }
 
-        img{
-            display: none;
-        }
-
         @include media-breakpoint-up(md){
+            padding-bottom: $grid-gutter;
+
             p{
                 max-width: 50%;
-                margin-bottom: $grid-gutter;
-                margin: auto;
+                margin: 0 auto $grid-gutter / 2;
             }
 
             img{
-                display: block;
                 position: absolute;
                 right: 75%;
                 bottom: 0;
                 height: 80%;
-                max-height: 300px;
                 width: auto;
             }
         }
@@ -549,9 +650,21 @@
         color: theme-color(white);
         padding-bottom: 0;
 
+        h3{
+            color: theme-color(yellow);
+        }
+
         .row{
-            margin-bottom: $grid-gutter;
+            margin-bottom: $grid-gutter * 2;
             align-items: center;
+
+            .image{
+                text-align: center;
+            }
+
+            &:last-child{
+                margin-bottom: 0;
+            }
 
             @include media-breakpoint-up(md){
                 &:nth-child(2n){
@@ -572,8 +685,7 @@
 
         .list{
             columns: 2;
-            font-style: italic;
-            font-size: .9em;
+            font-size: .8em;
             
             @include media-breakpoint-up(md){
                 columns: 3;
@@ -597,12 +709,18 @@
         .text{
             margin: auto;
             max-width: 800px;
+            padding-bottom: $grid-gutter;
         }
 
         img{
+            display: none;
             margin-top: $grid-gutter;
             width: 100%;
             margin-bottom: -1px; //hide bad pixels
+
+            @include media-breakpoint-up(md){
+                display: block;
+            }
         }
     }
 }
@@ -611,6 +729,10 @@
 .page.courage-score{
     background-color: theme-color(black);
 
+    .main{
+        padding: 0;
+    }
+
     h2{
         text-transform: uppercase;
     }
@@ -618,7 +740,7 @@
     #intro{
         color: theme-color(white);
         text-align: center;
-        height: 70vh;
+        height: 80vh;
         background-repeat: no-repeat;
         background-size: 0;
         
@@ -632,6 +754,12 @@
 
         .container{
             max-width: 800px;
+        }
+
+        
+
+        .button{
+            margin-top: $grid-gutter / 2;
         }
     }
 
@@ -667,9 +795,8 @@
         background-color: theme-color(lightgrey);
 
         .list{
-            font-size: .9em;
+            font-size: .8em;
             columns: 2;
-            font-style: italic;
             
             @include media-breakpoint-up(md){
                 columns: 3;
@@ -731,6 +858,21 @@
 
 }
 
+// DONATE
+.page.donate{
+    .row{
+        flex-flow: column-reverse;
+
+        @include media-breakpoint-up(md){
+            flex-flow: row;
+        }
+    }
+
+    .form{
+        margin-bottom: $grid-gutter;
+    }
+}
+
 article,
 .article{
     margin-bottom: $grid-gutter / 2;
@@ -788,16 +930,19 @@ article,
 
     .excerpt{
         margin-bottom: 10px;
-        margin-top: $grid-gutter / 2;
+        margin-top: 5px;
     }
 
     .byline{
         margin-bottom: 0;
         color: theme-color(grey);
+        font-size: .9em;
     }
 
     time{
         color: theme-color(grey);
         font-size: .9em;
+        margin-bottom: 5px;
+        display: inline-block;
     }
 }
