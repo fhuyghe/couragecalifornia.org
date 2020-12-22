@@ -9,7 +9,7 @@
           @include('partials.content-page')
         </div>
         <div class="col-md-6 form">
-          Donate form
+          @include('partials.donate-form')
         </div>
       </div>
     </div>
