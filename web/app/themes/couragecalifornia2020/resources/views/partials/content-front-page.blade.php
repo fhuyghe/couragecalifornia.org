@@ -90,7 +90,7 @@
             <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 <p>{!! $banner['text'] !!}</p>
-                <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" href="/voter-guide">{{ $banner['button_text'] }}</a>
             </div>
             <div class="offset-md-1 col-md-5 image">
                 <img src="{!! $banner['image']['url'] !!}" />
