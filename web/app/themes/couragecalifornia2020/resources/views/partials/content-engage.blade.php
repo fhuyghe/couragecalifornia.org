@@ -6,8 +6,8 @@
                 @php the_content() @endphp
             </div>
             <div class="col-md-6 categories">
-                <button id="clearFilters">All</button>
-                {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more" filters="true"]') !!}
+                {{-- <button id="clearFilters" class='active'>All</button> --}}
+                {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
                 {{-- <ul>
                     @foreach ($categories as $cat)
                 <li data-filter=".cat-{{ $cat->slug }}">{{ $cat->name }}</li>
@@ -49,6 +49,8 @@
                     @php
                     $args = array(
                         'id' => 'ajax_load_more',
+                        'filters' => "true",
+                        'target' => "categories",
                         'post_type' => 'post',
                         'posts_per_page' => '6',
                         'button_label' => 'Show More Posts',

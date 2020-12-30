@@ -369,35 +369,51 @@
         text-align: right;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
 
+        button{
+            padding-right: 20px;
+        }
+        
         button, 
-        li,
         li div.alm-filter--link{
             cursor: pointer;
+            font-size: .9em;
             text-transform: uppercase;
             display: inline-block;
             color: theme-color(grey);
             background: none;
             border: 0;
             margin-bottom: 0;
+            padding: 0 20px 0 0;
             
             &:hover,
             &.active{
                 color: theme-color(yellow);
             }
 
-            .field-radio{
                 &:before,
                 &:after{
                     display: none;
                 }
-            }
         }
         
         ul{
             display: flex;
             align-items: center;
             text-align: right;
+            padding: 0;
+
+            li{
+                padding: 0;
+                margin: 0;
+
+                &:last-of-type{
+                    .alm-filter--link{
+                        padding-right: 0;
+                    }
+                }
+            }
         }
 
         .alm-filters,
