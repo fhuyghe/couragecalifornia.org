@@ -50,60 +50,30 @@
     </div>
 </section>
 
-{{-- Legal Information --}}
-<section id="legal">
+@if(isset($data['accordeon']))
+@foreach ($data['accordeon'] as $row)
+<section class="accordeon">
     <div class="container">
-        {!! $data['legal_information'] !!}
-    </div>
-</section>
-
-@if(isset($data['equity']))
-    @php $section = $data['equity'] @endphp
-    <section id="equity">
-        <div class="container">
-            <div class="row">
+        <div class="header">
+            <h2>{{ $row['title'] }}</h2>
+            <div class="arrow">
+                <i class="fal fa-chevron-right"></i>
+                <i class="fal fa-chevron-up"></i>
+            </div>
+        </div>
+        
+        <div class="row">
                 <div class="col-md-6 text">
-                    <h2>{{ $section['title'] }}</h2>
-                    {!! $section['text'] !!}
+                    {!! $row['text'] !!}
                 </div>
                 <div class="col-md-6 image">
-                    <img src="{{ $section['image']['url'] }}" alt="{{ $section['image']['alt'] }}" />
+                    @if($row['illustration'])
+                        <img src="{{ $row['illustration']['url'] }}" 
+                            alt="{{ $row['illustration']['alt'] }}" />
+                    @endif
                 </div>
             </div>
         </div>
     </section>
+    @endforeach
 @endif
-
-@if(isset($data['institute']))
-    @php $section = $data['institute'] @endphp
-    <section id="bottom">
-        <div class="container">
-            <h2 class="text-center">{{ $section['title'] }}</h2>
-            <div class="text">
-                {!! $section['text'] !!}
-            </div>
-        </div>
-        @if($data['bottom_illustration'])
-            <img src="{{ $data['bottom_illustration']['url'] }}" />
-        @endif
-    </section>
-@endif
-
-{{-- @if($jobs)
-@php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
-<section id="jobs" style="background-image: url({{ $data['bottom_illustration']['url'] }});">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h2>{{ $jobsText['title'] }}</h2>
-                <p>{{ $jobsText['text'] }}</p>
-            </div>
-            <div class="col-md-8">
-                @foreach ($jobs as $job)
-                    @include('partials.job-block')
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
-@endif --}}

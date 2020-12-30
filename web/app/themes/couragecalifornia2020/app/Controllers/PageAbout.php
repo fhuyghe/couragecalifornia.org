@@ -31,10 +31,7 @@ class PageAbout extends Controller
 		$data['bottom_illustration'] = get_field('bottom_illustration');
 		$data['jobs'] = get_field('jobs');
 		$data['boards_of_director'] = get_field('boards_of_director');
-		$data['legal_information'] = get_field('legal_information');
-		$data['equity'] = get_field('equity_on_trial');
-		$data['institute'] = get_field('courage_california_institute');
-		$data['bottom_illustration'] = get_field('bottom_illustration');
+		$data['accordeon'] = get_field('accordeon');
 
         return $data;
     }

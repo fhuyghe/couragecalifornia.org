@@ -587,52 +587,70 @@
         }
     }
     
-    #bottom{
-        padding-bottom: 0;
-        background: theme-color(blue);
-        color: theme-color(white);
+    .accordeon{
+        padding: 0;
 
-        .text{
-            margin: auto;
-            max-width: 800px;
-            padding-bottom: $grid-gutter;
+        .header{
+            padding: $grid-gutter 0;
+            border-top: 1px solid theme-color(black);
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+
+            i{
+                font-size: 30px;
+                transition: .5s;
+
+                &.fa-chevron-up{
+                    display: none;
+                }
+            }
+
+            &:hover{
+                i{
+                    transform: translateX(10px);
+                }
+            }
         }
 
-        img{
-            display: none;
-            margin-top: $grid-gutter;
-            width: 100%;
-            margin-bottom: -1px; //hide bad pixels
+        .row{
+            height: 0;
+            transition: .5s;
+            overflow: hidden;
 
-            @include media-breakpoint-up(md){
-                display: block;
+            .text{
+                padding-bottom: $grid-gutter;
+            }
+
+            .image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &.active{
+            .header{
+                i{
+                    transform: rotate(90deg);
+
+                    &.fa-chevron-up{
+                        //display: block;
+                    }
+
+                    &.fa-chevron-right{
+                        //display: none;
+                    }
+
+                }
+                &:hover{
+                    i{
+                        transform: translateX(10px) rotate(90deg);
+                    }
+                }
             }
         }
     }
-
-    // #jobs{
-    //     background-color: theme-color(yellow);
-    //     background-repeat: no-repeat;
-    //     background-size: auto 400px;
-    //     background-position: right bottom;
-    //     padding-bottom: 450px;
-        
-    //     .job{
-    //         background: theme-color(white);
-    //         padding: $grid-gutter / 2;
-
-    //         h3{
-    //             font-family: 'Gilam', sans-serif;
-    //             text-transform: uppercase;
-    //             font-size: 1.2em;
-    //         }
-    //     }
-        
-    //     @include media-breakpoint-up(lg){
-    //         background-size: auto 80%;
-    //         padding-bottom: $grid-gutter;
-    //     }
-    // }
 }
 
 //Voter Guide
