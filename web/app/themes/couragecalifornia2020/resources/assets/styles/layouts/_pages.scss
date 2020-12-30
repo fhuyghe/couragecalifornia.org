@@ -579,6 +579,37 @@
         }
     }
 
+    #equity{
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    #bottom{
+        padding-bottom: 0;
+        background: theme-color(blue);
+        color: theme-color(white);
+
+        .text{
+            margin: auto;
+            max-width: 800px;
+            padding-bottom: $grid-gutter;
+        }
+
+        img{
+            display: none;
+            margin-top: $grid-gutter;
+            width: 100%;
+            margin-bottom: -1px; //hide bad pixels
+
+            @include media-breakpoint-up(md){
+                display: block;
+            }
+        }
+    }
+
     // #jobs{
     //     background-color: theme-color(yellow);
     //     background-repeat: no-repeat;
@@ -689,37 +720,6 @@
             
             @include media-breakpoint-up(md){
                 columns: 3;
-            }
-        }
-    }
-
-    #equity{
-        .image{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    
-    #bottom{
-        padding-bottom: 0;
-        background: theme-color(blue);
-        color: theme-color(white);
-
-        .text{
-            margin: auto;
-            max-width: 800px;
-            padding-bottom: $grid-gutter;
-        }
-
-        img{
-            display: none;
-            margin-top: $grid-gutter;
-            width: 100%;
-            margin-bottom: -1px; //hide bad pixels
-
-            @include media-breakpoint-up(md){
-                display: block;
             }
         }
     }

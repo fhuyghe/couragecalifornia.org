@@ -53,35 +53,3 @@
         </div>
     </section>
 @endif
-
-@if(isset($data['equity']))
-    @php $section = $data['equity'] @endphp
-    <section id="equity">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text">
-                    <h2>{{ $section['title'] }}</h2>
-                    {!! $section['text'] !!}
-                </div>
-                <div class="col-md-6 image">
-                    <img src="{{ $section['image']['url'] }}" alt="{{ $section['image']['alt'] }}" />
-                </div>
-            </div>
-        </div>
-    </section>
-@endif
-
-@if(isset($data['institute']))
-    @php $section = $data['institute'] @endphp
-    <section id="bottom">
-        <div class="container">
-            <h2 class="text-center">{{ $section['title'] }}</h2>
-            <div class="text">
-                {!! $section['text'] !!}
-            </div>
-        </div>
-        @if($data['bottom_illustration'])
-            <img src="{{ $data['bottom_illustration']['url'] }}" />
-        @endif
-    </section>
-@endif
