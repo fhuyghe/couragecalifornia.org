@@ -31,17 +31,21 @@ footer.main-footer{
     }
 
     .left{
-        a{
-            text-transform: uppercase;
-        }
-
-        p{
-            margin-bottom: 10px;
-            line-height: 1.4em;
-        }
-
         @include media-breakpoint-up(md){
             padding-right: $grid-gutter;
+        }
+
+        ul{
+            display: flex;
+            margin: 5px 0 0;
+            
+            li{
+                margin-right: 10px;
+                
+                &:first-child{
+                    display: none;
+                }
+            }
         }
     }
 
@@ -58,33 +62,9 @@ footer.main-footer{
             font-size: 1.4em;
         }
 
-        ul{
-            display: flex;
-            margin: 5px 0 0;
-            flex-flow: row-reverse;
-
-            @include media-breakpoint-up(md){
-                flex-flow: row;
-
-                li{
-                    &:last-child{
-                        text-align: right;
-                    }
-                }
-            }
-            
-            li{
-                margin-right: 10px;
-                
-                &:first-child{
-                    display: none;
-                }
-
-                &:last-child{
-                    flex: 1;
-                    margin-right: 0;
-                }
-            }
+        p{
+            margin-bottom: 10px;
+            line-height: 1.4em;
         }
     }
 

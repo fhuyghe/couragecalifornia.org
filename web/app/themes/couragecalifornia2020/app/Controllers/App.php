@@ -35,7 +35,7 @@ class App extends Controller
         $all_posts = get_posts( 'post_status=publish&order=ASC' );
         $first_post = $all_posts[0];
         $first_date = $first_post->post_date_gmt;
-        $copyright = 'Copyright &copy; ';
+        $copyright = '&copy; ';
         if ( substr( $first_date, 0, 4 ) == date( 'Y' ) ) {
             $copyright .= date( 'Y' );
         } else {
@@ -43,7 +43,6 @@ class App extends Controller
         }
         $copyright .= ' ';
         $copyright .= get_bloginfo( 'name' );
-        $copyright .= ' All rights reserved.';
         return $copyright;
     }
 }
