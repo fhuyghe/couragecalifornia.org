@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c381820d65ec99e3f0b3a2438f20408a",
+    "content-hash": "f23e5a9433350c9bcfdddaef161f93b9",
     "packages": [
+        {
+            "name": "13milliseconds/ajax-load-more-pro",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:13milliseconds/ajax-load-more-pro.git",
+                "reference": "a94998e478607e933912f696f9c3d30b5ca24e18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/13milliseconds/ajax-load-more-pro/zipball/a94998e478607e933912f696f9c3d30b5ca24e18",
+                "reference": "a94998e478607e933912f696f9c3d30b5ca24e18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Connekt",
+                    "homepage": "https://connekthq.com"
+                }
+            ],
+            "description": "Ajax Load More Pro using composer",
+            "homepage": "https://github.com/13milliseconds/simple-podcast-press",
+            "keywords": [
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/13milliseconds/ajax-load-more-pro/tree/master",
+                "issues": "https://github.com/13milliseconds/ajax-load-more-pro/issues"
+            },
+            "time": "2020-12-30T22:18:01+00:00"
+        },
         {
             "name": "13milliseconds/fg-drupal-to-wp-premium",
             "version": "dev-main",
@@ -388,20 +424,24 @@
         },
         {
             "name": "roots/bedrock-autoloader",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/bedrock-autoloader.git",
-                "reference": "885f2a5c425d82dfd811ef4f13ab8f5bcc89cd70"
+                "reference": "f508348a3365ab5ce7e045f5fd4ee9f0a30dd70f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/bedrock-autoloader/zipball/885f2a5c425d82dfd811ef4f13ab8f5bcc89cd70",
-                "reference": "885f2a5c425d82dfd811ef4f13ab8f5bcc89cd70",
+                "url": "https://api.github.com/repos/roots/bedrock-autoloader/zipball/f508348a3365ab5ce7e045f5fd4ee9f0a30dd70f",
+                "reference": "f508348a3365ab5ce7e045f5fd4ee9f0a30dd70f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "require-dev": {
+                "10up/wp_mock": "^0.4.2",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
             },
             "type": "library",
             "autoload": {
@@ -449,20 +489,20 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2020-05-18T04:43:20+00:00"
+            "time": "2020-12-04T15:59:12+00:00"
         },
         {
             "name": "roots/wordpress",
-            "version": "5.5.3",
+            "version": "5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.5.3"
+                "reference": "5.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.5.3",
-                "reference": "5.5.3"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.6",
+                "reference": "5.6"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -496,7 +536,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2020-10-30T20:40:02+00:00"
+            "time": "2020-12-08T22:15:57+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -924,15 +964,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "15.3",
+            "version": "15.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/15.3"
+                "reference": "tags/15.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -942,15 +982,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-fastest-cache",
-            "version": "0.9.1.2",
+            "version": "0.9.1.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-fastest-cache/",
-                "reference": "tags/0.9.1.2"
+                "reference": "tags/0.9.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.1.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.1.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -966,12 +1006,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "6aaf24c946b1f2689b85f0b3a62d30534d9aa1e4"
+                "reference": "49da07b20a780d3fca9fe12e1db27975a2910c18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/6aaf24c946b1f2689b85f0b3a62d30534d9aa1e4",
-                "reference": "6aaf24c946b1f2689b85f0b3a62d30534d9aa1e4",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/49da07b20a780d3fca9fe12e1db27975a2910c18",
+                "reference": "49da07b20a780d3fca9fe12e1db27975a2910c18",
                 "shasum": ""
             },
             "conflict": {
@@ -1001,7 +1041,7 @@
                 "composer/composer": "<=1-alpha.11",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/core": ">=2,<3.5.39",
-                "contao/core-bundle": "= 4.10.0|>=4,<4.4.52|>=4.5,<4.9.6",
+                "contao/core-bundle": ">=4,<4.4.52|>=4.5,<4.9.6|= 4.10.0",
                 "contao/listing-bundle": ">=4,<4.4.8",
                 "datadog/dd-trace": ">=0.30,<0.30.2",
                 "david-garcia/phpwhois": "<=4.3.1",
@@ -1045,6 +1085,8 @@
                 "friendsoftypo3/mediace": ">=7.6.2,<7.6.5",
                 "fuel/core": "<1.8.1",
                 "getgrav/grav": "<1.7-beta.8",
+                "getkirby/cms": ">=3,<3.4.5",
+                "getkirby/panel": "<2.5.14",
                 "gos/web-socket-bundle": "<1.10.4|>=2,<2.6.1|>=3,<3.3",
                 "gree/jose": "<=2.2",
                 "gregwar/rst": "<1.0.3",
@@ -1126,8 +1168,8 @@
                 "scheb/two-factor-bundle": ">=0,<3.26|>=4,<4.11",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
-                "shopware/core": "<=6.3.2",
-                "shopware/platform": "<=6.3.2",
+                "shopware/core": "<=6.3.4",
+                "shopware/platform": "<=6.3.4",
                 "shopware/shopware": "<5.6.9",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
                 "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
@@ -1273,7 +1315,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-01T13:02:08+00:00"
+            "time": "2020-12-21T18:11:20+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1331,6 +1373,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "13milliseconds/fg-drupal-to-wp-premium": 20,
+        "13milliseconds/ajax-load-more-pro": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,

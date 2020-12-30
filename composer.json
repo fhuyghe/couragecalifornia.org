@@ -32,9 +32,14 @@
     {
       "type": "composer",
       "url": "https://composer.deliciousbrains.com/8DAF13E16CC13B06BE314F3D5684DA29"
-    },{
+    },
+    {
       "type": "vcs",
       "url": "git@github.com:13milliseconds/fg-drupal-to-wp-premium.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:13milliseconds/ajax-load-more-pro.git"
     },
     {
       "type": "package",
@@ -59,10 +64,11 @@
     "vlucas/phpdotenv": "^4.1.8",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
-    "roots/wordpress": "5.5.3",
+    "roots/wordpress": "^5.6",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "13milliseconds/fg-drupal-to-wp-premium": "dev-main",
+    "13milliseconds/ajax-load-more-pro": "dev-master",
     "wpackagist-plugin/advanced-custom-fields": "^5.9.3",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.0.0",
     "wpackagist-plugin/duplicate-post": "^3.2",

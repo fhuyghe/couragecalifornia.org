@@ -367,29 +367,43 @@
     .categories{
         position: relative;
         text-align: right;
+        display: flex;
+        align-items: center;
 
-        h4{
-            font-size: 1em;
+        button, 
+        li,
+        li div.alm-filter--link{
+            cursor: pointer;
             text-transform: uppercase;
+            display: inline-block;
+            color: theme-color(grey);
+            background: none;
+            border: 0;
             margin-bottom: 0;
+            
+            &:hover,
+            &.active{
+                color: theme-color(yellow);
+            }
+
+            .field-radio{
+                &:before,
+                &:after{
+                    display: none;
+                }
+            }
         }
         
         ul{
+            display: flex;
+            align-items: center;
             text-align: right;
-            list-style: none;
-            background: theme-color(white);
+        }
 
-            li{
-                cursor: pointer;
-                text-transform: uppercase;
-                display: inline-block;
-                color: theme-color(grey);
-                
-                &:hover,
-                &.active{
-                    color: theme-color(yellow);
-                }
-            }
+        .alm-filters,
+        .alm-filter--inner{
+            padding: 0;
+            margin: 0;
         }
     }
 

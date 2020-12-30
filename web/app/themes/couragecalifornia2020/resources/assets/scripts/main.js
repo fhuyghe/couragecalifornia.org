@@ -9,7 +9,7 @@ import Router from './util/Router';
 import common from './routes/common'; 
 import home from './routes/home';
 import about from './routes/about';
-import actions from './routes/actions';
+import engage from './routes/engage';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -19,7 +19,7 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   about,
-  actions,
+  engage,
 });
 
 // Load Events

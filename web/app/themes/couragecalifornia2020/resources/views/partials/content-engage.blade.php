@@ -6,8 +6,9 @@
                 @php the_content() @endphp
             </div>
             <div class="col-md-6 categories">
-                {{-- <h4>Categories</h4>
-                <ul>
+                <button id="clearFilters">All</button>
+                {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more" filters="true"]') !!}
+                {{-- <ul>
                     @foreach ($categories as $cat)
                 <li data-filter=".cat-{{ $cat->slug }}">{{ $cat->name }}</li>
                     @endforeach
@@ -19,7 +20,6 @@
 
 <section id='articles'>
     <div class="container">
-        @if($actions)
         <div class="row grid">
 
             <div class="col-md-12">
@@ -29,7 +29,7 @@
             </div>
 
             <div class="col-md-8">
-                @foreach ($actions as $article)
+                {{-- @foreach ($actions as $article)
                     @if($hiddenID !== $article->ID)
                         @include('partials.article-block')
                     @endif
@@ -43,11 +43,12 @@
                             </div>
                         </div>
                     @endif
-                @endforeach
+                @endforeach --}}
 
                 <div class="load-more">
                     @php
                     $args = array(
+                        'id' => 'ajax_load_more',
                         'post_type' => 'post',
                         'posts_per_page' => '6',
                         'button_label' => 'Show More Posts',
@@ -72,9 +73,20 @@
                 </div>
             </div>
         </div>
-    @endif
-        <footer class="text-center">
-           
-        </footer>
     </div>
 </section>
+
+<script>
+    let clearBtn = document.getElementById('clearFilters');
+    clearBtn.addEventListener('click', function(){
+      almfilters.reset();
+    });
+
+    window.almFiltersChange = function(){
+    console.log('Filtering has started...');
+    }
+
+    window.almFiltersComplete = function(){
+   console.log('Ajax filtering has completed!');
+}
+</script>
