@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row grid">
 
-            <div class="col-md-12">
+            <div class="col-md-12" id="featuredAction">
                 @php $article = $latestaction[0] @endphp
                 @php $hiddenID = $article->ID @endphp
                 @include('partials.article-block-featured')
@@ -80,16 +80,11 @@
 </section>
 
 <script>
-    let clearBtn = document.getElementById('clearFilters');
-    clearBtn.addEventListener('click', function(){
-      almfilters.reset();
-    });
-
-    window.almFiltersChange = function(){
-    console.log('Filtering has started...');
+    window.almFiltersActive = function(obj){
+        if(obj){
+            document.getElementById('articles').classList.add("filtered");
+        } else {
+            document.getElementById('articles').classList.remove("filtered");
+        }
     }
-
-    window.almFiltersComplete = function(){
-   console.log('Ajax filtering has completed!');
-}
 </script>

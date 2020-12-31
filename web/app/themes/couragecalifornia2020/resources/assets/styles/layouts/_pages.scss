@@ -426,6 +426,12 @@
     #articles{
         padding-top: $grid-gutter / 2;
 
+        &.filtered{
+            #featuredAction{
+                display: none;
+            }
+        }
+
     }
 
     .alm-btn-wrap{
