@@ -52,9 +52,10 @@
                         'filters' => "true",
                         'target' => "categories",
                         'post_type' => 'post',
-                        'posts_per_page' => '6',
+                        'posts_per_page' => '5',
                         'button_label' => 'Show More Posts',
                         'button_loading_label' => 'Loading...',
+                        'placeholder' => 'true',
                         'scroll' => 'false'
                     );	
                     if(function_exists('alm_render')){
