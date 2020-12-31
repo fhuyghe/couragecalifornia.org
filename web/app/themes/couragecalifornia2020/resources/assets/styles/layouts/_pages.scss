@@ -228,17 +228,45 @@
         }
 
         @include media-breakpoint-up(md){
+            text-align: center;
+        }
+        
+        @include media-breakpoint-up(lg){
             background-size: contain;
             background-position: right;
+            text-align: left;
 
-            text-align: center;
+            .text{
+                margin: 0 0 20px;
+            }
 
             input[type="text"]{
+                max-width: 300px;
                 border-bottom: 2px solid theme-color(white);
             }
 
             input[type="submit"]{
                 width: auto;
+            }
+
+            .form-wrap{
+                justify-content: flex-start;
+            }
+        }
+
+        @include media-breakpoint-up(xl){
+            text-align: center;
+
+            .text{
+                margin: 0 auto 20px;
+            }
+
+            .form-wrap{
+                justify-content: center;
+            }
+
+            input[type="text"]{
+                max-width: 500px;
             }
         }
     }

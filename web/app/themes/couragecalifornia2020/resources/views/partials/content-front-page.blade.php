@@ -34,11 +34,11 @@
     <div class="container">
         <h2>Engage</h2>
         <div class="row">
-            <div class="col-md-8 action">
+            <div class="col-lg-8 action">
                 @php $article = $data['featured_action'] @endphp
                 @include('partials.article-block-featured')
             </div>
-            <div class="col-md-4 latest">
+            <div class="col-lg-4 latest">
                 @foreach ($latest_news as $article)
                     @include('partials.article-block-landing')
                 @endforeach
@@ -70,12 +70,12 @@
  <section id="courageScore" class="banner">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 text slide-up">
+            <div class="col-lg-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 <p>{!! $banner['text'] !!}</p>
                 <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
             </div>
-            <div class="col-md-6 image">
+            <div class="col-lg-6 image">
                 <img src="{!! $banner['image']['url'] !!}" />
             </div>
         </div>
