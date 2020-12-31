@@ -394,10 +394,8 @@
 
     .categories{
         position: relative;
-        text-align: right;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
 
         button{
             padding-right: 20px;
@@ -420,16 +418,15 @@
                 color: theme-color(yellow);
             }
 
-                &:before,
-                &:after{
-                    display: none;
-                }
+            &:before,
+            &:after{
+                display: none;
+            }
         }
         
         ul{
             display: flex;
-            align-items: center;
-            text-align: right;
+            flex-flow: row wrap;
             padding: 0;
 
             li{
@@ -448,6 +445,14 @@
         .alm-filter--inner{
             padding: 0;
             margin: 0;
+        }
+
+        @include media-breakpoint-up(lg){
+            text-align: right;
+
+            .categories{
+                justify-content: flex-end;
+            }
         }
     }
 
@@ -489,7 +494,7 @@
             border-bottom: 1px solid theme-color(grey);
         }
 
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             &.desktop{
                 display: block;
             }

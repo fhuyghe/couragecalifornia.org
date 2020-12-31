@@ -1,11 +1,11 @@
 <div class="page-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h1>{!! App::title() !!}</h1>
                 @php the_content() @endphp
             </div>
-            <div class="col-md-6 categories">
+            <div class="col-lg-6 categories">
                 {{-- <button id="clearFilters" class='active'>All</button> --}}
                 {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
                 {{-- <ul>
@@ -28,23 +28,7 @@
                 @include('partials.article-block-featured')
             </div>
 
-            <div class="col-md-8">
-                {{-- @foreach ($actions as $article)
-                    @if($hiddenID !== $article->ID)
-                        @include('partials.article-block')
-                    @endif
-                    @if($loop->iteration == 5)
-                        <div class="newsletter-widget mobile">
-                            <div class="inner">
-                                <img src="{{ $newsletter['image']['url'] }}" />
-                                <h3>{{ $newsletter['title'] }}</h3>
-                                <p>{{ $newsletter['text'] }}</p>
-                                @include('partials/newsletter-signup')
-                            </div>
-                        </div>
-                    @endif
-                @endforeach --}}
-
+            <div class="col-lg-8">
                 <div class="load-more">
                     @php
                     $args = array(
@@ -65,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="newsletter-widget desktop">
                     <div class="inner">
                     <img src="{{ $newsletter['image']['url'] }}" />
