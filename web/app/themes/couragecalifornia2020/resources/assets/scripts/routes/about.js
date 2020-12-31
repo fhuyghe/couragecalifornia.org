@@ -8,6 +8,7 @@ export default {
 
     $('.person').click(function (e) { 
       e.stopPropagation();
+      $('.person.active').removeClass('active');
       $(e.target).parents('.person').toggleClass('active');
     });
 

@@ -526,24 +526,28 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: 0px;
+                display: inline-block;
 
-                &:hover{
-                    color: theme-color(blue);
-                }
-
+                
                 &.with-bio{
                     cursor: pointer;
+                    
+                    &:hover{
+                        color: theme-color(blue);
+                    }
                 }
                 
                 h4{
                     font-size: 1em;
                     font-weight: 600;
                     margin-bottom: 0px;
+                    display: inline-block;
                 }
 
                 .plus{
                     color: theme-color(darkgrey);
                     margin-left: 10px;
+                    display: inline-block;
                 }
             }
 
