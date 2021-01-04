@@ -4,6 +4,16 @@ footer.main-footer{
     padding: $grid-gutter 0;
     font-size: .8em;
 
+    p{
+        a{
+            color: theme-color(white);
+
+            &:hover{
+                color: theme-color(blue);
+            }
+        }
+    }
+
     .row{
         flex-flow: column-reverse;
         

@@ -99,6 +99,13 @@ a{
     }
 }
 
+p{
+    a{
+        color: theme-color(blue);
+        transition: .25s;
+    }
+}
+
 button:focus{
     outline: 0;
 }
