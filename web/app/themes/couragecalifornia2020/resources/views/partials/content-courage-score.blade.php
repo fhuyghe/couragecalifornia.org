@@ -1,7 +1,7 @@
 <section id="intro" style="background-image: url({{ $data['top_background']['url'] }});">
     <div class="container text-center">
         {!! the_content() !!}
-        <a class="button arrow" href="https://couragescore.com">Courage Score Website</a>
+        <a class="button arrow" href="https://couragescore.org" target="_blank">Courage Score Website</a>
     </div>
 </section>
 
@@ -57,6 +57,7 @@
             <div class="col-md-6 text slide-up">
                 <h2>{!! $section['title'] !!}</h2>
                 {!! $section['text'] !!}
+                <a class="button arrow" href="https://couragescore.org" target="_blank">Courage Score Website</a>
             </div>
         </div>
     </div>
