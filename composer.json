@@ -67,7 +67,6 @@
     "roots/wordpress": "^5.6",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "13milliseconds/fg-drupal-to-wp-premium": "dev-main",
     "13milliseconds/ajax-load-more-pro": "dev-master",
     "wpackagist-plugin/advanced-custom-fields": "^5.9.3",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.0.0",
@@ -78,9 +77,7 @@
     "wpackagist-plugin/popup-builder":"3.68.4",
     "wpackagist-plugin/wordpress-seo":"^15.0",
     "wpackagist-plugin/social-warfare":"4.1.0",
-    "wpackagist-plugin/ajax-load-more":"5.3.8",
-    "wpackagist-plugin/fg-drupal-to-wp":"2.22.2",
-    "wpackagist-plugin/delete-duplicate-posts":"4.4.8"
+    "wpackagist-plugin/ajax-load-more":"5.3.8"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
