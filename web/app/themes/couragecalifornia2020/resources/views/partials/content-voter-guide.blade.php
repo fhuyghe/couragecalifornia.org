@@ -29,9 +29,12 @@
     <div class="container">
         @foreach($data['blue'] as $banner)
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 text">
                     <h3>{{ $banner['title'] }}</h3>
                     <p>{{ $banner['text'] }}</p>
+                    @if($loop->iteration == 3)
+                    <a class="white button arrow" target="_blank" href="https://progressivevotersguide.com/california">Voter Guide Website</a>
+                    @endif
                 </div>
                 <div class="col-md-6 image">
                     <img src="{{ $banner['image']['url'] }}" />

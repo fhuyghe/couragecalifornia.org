@@ -52,6 +52,7 @@
 
 @if(isset($data['accordeon']))
 @foreach ($data['accordeon'] as $row)
+    @php $link = $row['link'] @endphp
 <section class="accordeon">
     <div class="container">
         <div class="header">
@@ -65,11 +66,16 @@
         <div class="row">
                 <div class="col-md-6 text">
                     {!! $row['text'] !!}
+                    @if($link)
+                        <a class="button arrow" href="{{ $link }}" target="_blank">{{ $row['title'] }}</a>
+                    @endif
                 </div>
                 <div class="col-md-6 image">
                     @if($row['illustration'])
-                        <img src="{{ $row['illustration']['url'] }}" 
+                        @if($link) <a href="{{ $link }}" target="_blank"> @endif
+                            <img src="{{ $row['illustration']['url'] }}" 
                             alt="{{ $row['illustration']['alt'] }}" />
+                        @if($link) </a> @endif
                     @endif
                 </div>
             </div>

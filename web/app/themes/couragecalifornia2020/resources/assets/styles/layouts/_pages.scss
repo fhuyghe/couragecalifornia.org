@@ -772,6 +772,11 @@
             color: theme-color(yellow);
         }
 
+        .button{
+            background-color: theme-color(white);
+            color: theme-color(blue);
+        }
+
         .row{
             margin-bottom: $grid-gutter * 2;
             align-items: center;
@@ -782,6 +787,10 @@
 
             &:last-child{
                 margin-bottom: 0;
+                
+                .text{
+                    padding-bottom: $grid-gutter;
+                }
             }
 
             @include media-breakpoint-up(md){
