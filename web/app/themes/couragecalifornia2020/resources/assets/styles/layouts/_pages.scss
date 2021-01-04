@@ -686,10 +686,7 @@
             height: 0;
             transition: .5s;
             overflow: hidden;
-
-            .text{
-                padding-bottom: $grid-gutter;
-            }
+            padding-bottom: $grid-gutter;
 
             .image{
                 display: flex;
@@ -787,7 +784,7 @@
 
             &:last-child{
                 margin-bottom: 0;
-                
+
                 .text{
                     padding-bottom: $grid-gutter;
                 }
