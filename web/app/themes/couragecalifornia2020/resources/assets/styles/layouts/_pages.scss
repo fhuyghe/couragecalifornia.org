@@ -388,6 +388,21 @@
 .page.engage{
     background: theme-color(lightgrey);
 
+    //Activate the ALL button
+    #clearFilters{
+        color: theme-color(yellow);
+    }
+
+    &.filtered{
+        #featuredAction{
+            display: none;
+        }
+
+        #clearFilters{
+            color: theme-color(grey);
+        }
+    }
+
     .page-header{
         padding-bottom: 0;
     }
@@ -454,12 +469,6 @@
 
     #articles{
         padding-top: $grid-gutter / 2;
-
-        &.filtered{
-            #featuredAction{
-                display: none;
-            }
-        }
 
     }
 

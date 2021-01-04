@@ -6,13 +6,8 @@
                 @php the_content() @endphp
             </div>
             <div class="col-lg-6 categories">
-                {{-- <button id="clearFilters" class='active'>All</button> --}}
+                <button id="clearFilters">All</button>
                 {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
-                {{-- <ul>
-                    @foreach ($categories as $cat)
-                <li data-filter=".cat-{{ $cat->slug }}">{{ $cat->name }}</li>
-                    @endforeach
-                </ul> --}}
             </div>
         </div>
     </div>
@@ -64,11 +59,16 @@
 </section>
 
 <script>
+    let clearBtn = document.getElementById('clearFilters');
+    clearBtn.addEventListener('click', function(){
+      almfilters.reset();
+    });
+
     window.almFiltersActive = function(obj){
         if(obj){
-            document.getElementById('articles').classList.add("filtered");
+            document.body.classList.add("filtered");
         } else {
-            document.getElementById('articles').classList.remove("filtered");
+            document.body.classList.remove("filtered");
         }
     }
 </script>
