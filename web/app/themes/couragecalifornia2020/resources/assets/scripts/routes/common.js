@@ -13,7 +13,7 @@ export default {
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
 
-    $('.hamburger').click(function () { 
+    $('.hamburger').on('click', function () { 
       $('.top-banner').toggleClass('active');
     });
   },

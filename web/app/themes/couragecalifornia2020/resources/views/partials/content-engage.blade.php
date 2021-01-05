@@ -50,6 +50,7 @@
                     <img src="{{ $newsletter['image']['url'] }}" />
                     <h3>{{ $newsletter['title'] }}</h3>
                     <p>{{ $newsletter['text'] }}</p>
+
                     @include('partials/newsletter-signup')
                     </div>
                 </div>
