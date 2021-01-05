@@ -17,7 +17,7 @@
     <input name="phone" id="id_phone" type="hidden">
     <input type="hidden" name="country" value="United States">
   <p style="clear: both; text-align:center;"><input class="submitform" type="submit" value="{{ $buttonText }}"></p>
-    <input type="hidden" name="page" value="CC-Institute-voter-registration">
+    <input type="hidden" name="page" value="CC_c4_signup">
     <input type="hidden" name="lists" value="5" />
   </div>
 </form>
