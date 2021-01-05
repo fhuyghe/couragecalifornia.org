@@ -730,7 +730,7 @@
                 align-items: center;
                 justify-content: center;
 
-                @include media-breakpoint-down(md){
+                @include media-breakpoint-down(lg){
                     img{
                         padding-bottom: 20px;
                         max-width: 250px;
