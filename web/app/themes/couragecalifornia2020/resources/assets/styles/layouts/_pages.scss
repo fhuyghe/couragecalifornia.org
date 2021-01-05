@@ -695,7 +695,10 @@
             height: 0;
             transition: .5s;
             overflow: hidden;
-            padding-bottom: $grid-gutter;
+            
+            .text{
+                padding-bottom: $grid-gutter;
+            }
 
             .image{
                 display: flex;
