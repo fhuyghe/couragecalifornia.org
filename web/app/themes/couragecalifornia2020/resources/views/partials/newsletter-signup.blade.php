@@ -12,7 +12,7 @@
     <ul class="compact" id="ak-errors"></ul>
     <input name="first_name" id="id_first_name" type="hidden">
     <input name="last_name" id="id_last_name" type="hidden">
-    <input name="email" placeholder="Email" id="id_email" type="text">
+    <input name="email" placeholder="Email Address" id="id_email" type="text">
     <input name="zip" id="id_zip" type="hidden">
     <input name="phone" id="id_phone" type="hidden">
     <input type="hidden" name="country" value="United States">

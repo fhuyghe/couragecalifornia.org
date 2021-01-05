@@ -675,15 +675,20 @@
         padding: 0;
 
         .header{
-            padding: $grid-gutter 0;
+            padding: $grid-gutter / 2 0;
             border-top: 1px solid theme-color(black);
             display: flex;
             justify-content: space-between;
             cursor: pointer;
 
+            @include media-breakpoint-up(lg){
+                padding: $grid-gutter 0;
+            }
+
             i{
                 font-size: 30px;
                 transition: .5s;
+                transform: translateX(-10px);
 
                 &.fa-chevron-up{
                     display: none;
@@ -692,7 +697,17 @@
 
             &:hover{
                 i{
-                    transform: translateX(10px);
+                    transform: translateX(0);
+                }
+            }
+
+            @include media-breakpoint-up(lg){
+                transform: translateX(0);
+
+                &:hover{
+                    i{
+                        transform: translateX(10px);
+                    }
                 }
             }
         }
@@ -701,6 +716,10 @@
             height: 0;
             transition: .5s;
             overflow: hidden;
+
+            @include media-breakpoint-down(md){
+                flex-flow: column-reverse;
+            }
             
             .text{
                 padding-bottom: $grid-gutter;
@@ -710,13 +729,21 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include media-breakpoint-down(md){
+                    padding-bottom: $grid-gutter / 2;
+                }
             }
         }
 
         &.active{
             .header{
                 i{
-                    transform: rotate(90deg);
+                    transform: rotate(90deg) translateX(-10px);
+                    
+                    @include media-breakpoint-up(lg){
+                        transform: rotate(90deg);
+                    }
 
                     &.fa-chevron-up{
                         //display: block;
@@ -729,7 +756,11 @@
                 }
                 &:hover{
                     i{
-                        transform: translateX(10px) rotate(90deg);
+                        transform: translateX(-10px) rotate(90deg);
+
+                        @include media-breakpoint-up(lg){
+                            transform: translateX(10px) rotate(90deg);
+                        }
                     }
                 }
             }

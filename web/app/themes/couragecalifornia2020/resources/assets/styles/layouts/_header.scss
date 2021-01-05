@@ -107,8 +107,12 @@
   .nav{
     li {
     @extend .nav-item;
-    font-size: .9em;
+    font-size: 1.5em;
     padding: 0.5rem 1rem;
+    
+    @include media-breakpoint-up(xl){
+      font-size: .9em;
+    }
 
     &.current-menu-item{
       a{
@@ -119,7 +123,7 @@
           left: 0;
         }
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(xl){
           color: theme-color(white);
         }
       }
@@ -149,7 +153,7 @@
         }
       }
 
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(xl){
         &:after{
           content: '';
           height: 2px;

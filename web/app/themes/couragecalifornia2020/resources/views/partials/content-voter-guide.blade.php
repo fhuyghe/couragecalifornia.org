@@ -3,7 +3,7 @@
         <div class="container">
             <h1>{!! App::title() !!}</h1>
             {!! $data['intro'] !!}
-            <a class="button" target="_blank" href="https://progressivevotersguide.com/california">Voter Guide Website</a>
+            <a class="button arrow" target="_blank" href="https://progressivevotersguide.com/california">Voter Guide Website</a>
 
             @if($data['top_illustration'])
                 <img src="{{ $data['top_illustration']['url'] }}" />
