@@ -117,8 +117,13 @@ html.sr .reveal {
 
 
 //Newsletter Form
+.newsletter-wrap{
+    .signup-success{
+        font-weight: 600;
+    }
+}
 
-.newsletter-form .form-wrap{
+.actionkit-widget{
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -127,16 +132,6 @@ html.sr .reveal {
 
     @include media-breakpoint-up(md){
         flex-flow: row wrap;
-    }
-}
-
-.form-wrap{
-
-    #ak-errors{
-        order: 1;
-        flex: 0 0 100%;
-        color: red;
-        list-style: none;
     }
 
     input[type="email"],

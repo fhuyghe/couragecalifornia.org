@@ -58,7 +58,7 @@
             <h2>{!! $newsletter['title'] !!}</h2>
             <p>{!! $newsletter['text'] !!}</p>
         </div>
-        @include('partials.newsletter-signup', ['buttonText' => "Count Me In   →"])
+        @include('partials.newsletter-signup', ['buttonText' => "Count Me In   →", "formName" => "signup"])
         <div class="success">
             {{ $newsletter['success_message']}}
         </div>
