@@ -1,14 +1,9 @@
 @php $categories = get_the_category($article->ID); @endphp
 
-@php $newtab = true @endphp
-@if(in_category(6, $article))
-    @php $link = get_field('link', $article->ID) @endphp
-@else
-    @if(in_category(7, $article))
-        @php $link = get_post_meta($article->ID, 'wpcf-field_ak_link_url', true) @endphp
-    @else
-        @php $newtab = false @endphp
-        @php $link = get_the_permalink($article->ID) @endphp
+@if(in_category(7, $article))
+    @php $link = get_post_meta($article->ID, 'wpcf-field_ak_link_url', true) @endphp
+    @if(!$link)
+        @php $link = get_field('link', $article->ID) @endphp
     @endif
 @endif
 
@@ -16,7 +11,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="thumbnail">
-            <a href="{{ $link }}" @if($newtab) target="_blank" @endif>
+            <a href="{{ get_the_permalink($article->ID) }}">
                 {!! get_the_post_thumbnail($article->ID, 'large') !!}
             </a>
             </div>
@@ -29,7 +24,7 @@
                 </div>
                 <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date('', $article->ID) }}</time>
 
-                <h3><a href="{{ $link }}"  @if($newtab) target="_blank" @endif>
+                <h3><a href="{{ get_the_permalink($article->ID) }}">
                     {!! get_the_title($article->ID) !!}
                 </a></h3>
 
@@ -42,6 +37,12 @@
                     <div class="excerpt">
                         {!! get_the_excerpt($article->ID) !!}
                     </div>
+
+                    @if(in_category(7, $article))
+                    <div>
+                        <a href="{{ $link }}" target="_blank" class="button yellow arrow">Act Now</a>
+                    </div>
+                    @endif
         </div>
     </div>
 </div>
