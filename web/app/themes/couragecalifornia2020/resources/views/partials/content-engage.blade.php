@@ -51,7 +51,7 @@
                     <h3>{{ $newsletter['title'] }}</h3>
                     <p>{{ $newsletter['text'] }}</p>
 
-                    @include('partials/newsletter-signup', ["formName" => "signup"])
+                    @include('partials/newsletter-signup', ['buttonText' => "→", "formName" => "signup"])
                     </div>
                 </div>
             </div>
