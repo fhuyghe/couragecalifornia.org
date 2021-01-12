@@ -840,6 +840,10 @@
                 .text{
                     padding-bottom: $grid-gutter;
                 }
+
+                .image{
+                    align-self: flex-end;
+                }
             }
 
             @include media-breakpoint-up(md){
