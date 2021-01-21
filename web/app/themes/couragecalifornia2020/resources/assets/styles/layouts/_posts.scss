@@ -78,7 +78,11 @@
             }
 
             .hero{
-                margin-top: $grid-gutter;
+                img{
+                    max-height: 600px;
+                    margin: auto;
+                    display: block;
+                }
             }
         }
         
@@ -110,5 +114,21 @@
                 }
             }
         }
+    }
+}
+
+.wp-block-image{
+    margin: $grid-gutter auto;
+
+    img{
+        max-height: 600px;
+        margin: auto;
+        display: block;
+    }
+
+    figcaption{
+        font-style: italic;
+        text-align: center;
+        font-style: .8em;
     }
 }
