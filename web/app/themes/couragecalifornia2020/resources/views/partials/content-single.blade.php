@@ -24,4 +24,11 @@
         @endif
       </div>
   </div>
+  @if(in_category(1))
+  <footer>
+    <div class="container">
+      {!! the_field('press_releases_footer', 'option') !!}
+    </div>
+  </footer>
+  @endif
 </article>

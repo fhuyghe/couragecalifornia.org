@@ -1,5 +1,7 @@
 .single{
     article{
+        margin-bottom: 0;
+
         .container{
             margin: auto;
             max-width: 900px;
@@ -93,20 +95,19 @@
         }
 
         footer{
-            padding: $grid-gutter * 2 0;
-        }
-    }
-}
-
-.single-press-release{
-    article{
-        footer{
+            padding: $grid-gutter 0;
             background: theme-color(beige);
 
             h3{
                 font-family: 'Gilam', sans-serif;
                 color: theme-color(yellow);
                 font-size: 1em;
+            }
+
+            p{
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
         }
     }
