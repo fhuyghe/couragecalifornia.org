@@ -79,9 +79,10 @@
 
             .hero{
                 padding-top: $grid-gutter;
-                
+
                 img{
                     max-height: 600px;
+                    width: auto;
                     margin: auto;
                     display: block;
                 }
@@ -124,6 +125,7 @@
 
     img{
         max-height: 600px;
+        width: auto;
         margin: auto;
         display: block;
     }
