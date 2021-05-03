@@ -156,35 +156,35 @@ function create_posttype() {
         )
     );
     
-    register_post_type( 'job',
-    // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Jobs' ),
-                'singular_name' => __( 'Job' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'jobs'),
-            'show_in_rest' => true,
-            'menu_icon' => 'dashicons-hammer',
-        )
-    );
+    // register_post_type( 'job',
+    // // CPT Options
+    //     array(
+    //         'labels' => array(
+    //             'name' => __( 'Jobs' ),
+    //             'singular_name' => __( 'Job' )
+    //         ),
+    //         'public' => true,
+    //         'has_archive' => true,
+    //         'rewrite' => array('slug' => 'jobs'),
+    //         'show_in_rest' => true,
+    //         'menu_icon' => 'dashicons-hammer',
+    //     )
+    // );
     
-    register_post_type( 'press-release',
-    // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Press Releases' ),
-                'singular_name' => __( 'Press Release' )
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'press-releases'),
-            'show_in_rest' => true,
-            'menu_icon' => 'dashicons-format-aside',
-        )
-    );
+    // register_post_type( 'press-release',
+    // // CPT Options
+    //     array(
+    //         'labels' => array(
+    //             'name' => __( 'Press Releases' ),
+    //             'singular_name' => __( 'Press Release' )
+    //         ),
+    //         'public' => true,
+    //         'has_archive' => true,
+    //         'rewrite' => array('slug' => 'press-releases'),
+    //         'show_in_rest' => true,
+    //         'menu_icon' => 'dashicons-format-aside',
+    //     )
+    // );
 }
 // Hooking up our function to theme setup
 add_action( 'init', __NAMESPACE__.'\\create_posttype' );

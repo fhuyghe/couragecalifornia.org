@@ -58,18 +58,3 @@
         </div>
     </div>
 </section>
-
-<script>
-    let clearBtn = document.getElementById('clearFilters');
-    clearBtn.addEventListener('click', function(){
-      almfilters.reset();
-    });
-
-    window.almFiltersActive = function(obj){
-        if(obj){
-            document.body.classList.add("filtered");
-        } else {
-            document.body.classList.remove("filtered");
-        }
-    }
-</script>
