@@ -83,3 +83,24 @@
     </section>
     @endforeach
 @endif
+
+
+{{-- JOBS --}}
+{{-- @if($jobs) --}}
+    @php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
+    <section id="jobs" style="background-image: url({{ $data['bottom_illustration']['url'] }});">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>{{ $jobsText['title'] }}</h2>
+                    <p>{{ $jobsText['text'] }}</p>
+                </div>
+                <div class="col-md-8">
+                    @foreach ($jobs as $job)
+                        @include('partials.job-block')
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+{{-- @endif --}}
