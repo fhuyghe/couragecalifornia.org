@@ -88,7 +88,7 @@
 {{-- JOBS --}}
 {{-- @if($jobs) --}}
     @php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
-    <section id="jobs" style="background-image: url({{ $data['bottom_illustration']['url'] }});">
+    <section id="jobs" style="background-image: url({{ $data['jobs']['bottom_illustration']['url'] }});">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">

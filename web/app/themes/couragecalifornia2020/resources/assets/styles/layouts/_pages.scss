@@ -790,7 +790,7 @@
         }
 
         @include media-breakpoint-up(lg){
-            background-size: auto 80%;
+            background-size: auto 500px;
             padding-bottom: $grid-gutter;
         }
     }
