@@ -96,12 +96,16 @@
                     <p>{{ $jobsText['text'] }}</p>
                 </div>
                 <div class="col-md-8">
-                    @php global $post @endphp
-                    @foreach ($jobs as $post)
-                        @php setup_postdata($post) @endphp
-                        @include('partials.job-block')
-                        @php wp_reset_postdata() @endphp
+                    <div class="row">
+                        @php global $post @endphp
+                        @foreach ($jobs as $post)
+                        <div class="col-lg-6">
+                            @php setup_postdata($post) @endphp
+                            @include('partials.job-block')
+                            @php wp_reset_postdata() @endphp
+                        </div>
                     @endforeach
+                </div>
                 </div>
             </div>
         </div>
