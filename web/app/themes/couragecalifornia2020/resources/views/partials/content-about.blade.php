@@ -86,7 +86,7 @@
 
 
 {{-- JOBS --}}
-{{-- @if($jobs) --}}
+@if($jobs)
     @php $jobsText = $data['jobs'] ?: array('title' => '', 'text' => '') @endphp
     <section id="jobs" style="background-image: url({{ $data['jobs']['bottom_illustration']['url'] }});">
         <div class="container">
@@ -96,11 +96,14 @@
                     <p>{{ $jobsText['text'] }}</p>
                 </div>
                 <div class="col-md-8">
-                    @foreach ($jobs as $job)
+                    @php global $post @endphp
+                    @foreach ($jobs as $post)
+                        @php setup_postdata($post) @endphp
                         @include('partials.job-block')
+                        @php wp_reset_postdata() @endphp
                     @endforeach
                 </div>
             </div>
         </div>
     </section>
-{{-- @endif --}}
+@endif
