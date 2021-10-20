@@ -8,8 +8,11 @@
         </div>
       </div>
       <div class="col-md-6 right">
-        <h3>Get updates from Courage</h3>
-        @include('partials.newsletter-signup', ['buttonText' => "Subscribe  →", "formName" => "footer-signup"])
+        <div class="footer-signup">
+          <h3>Get updates from Courage</h3>
+          <a class="button" href="https://act.couragecampaign.org/signup/will-you-join-us/">Sign Up Now!</a>
+        </div>
+        {{-- @include('partials.newsletter-signup', ['buttonText' => "Subscribe  →", "formName" => "footer-signup"]) --}}
         @php dynamic_sidebar('right-footer') @endphp
       </div>
     </div>

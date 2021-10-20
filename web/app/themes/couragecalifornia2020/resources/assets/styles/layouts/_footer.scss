@@ -66,10 +66,22 @@ footer.main-footer{
             margin-bottom: 0;
         }
 
+        .footer-signup{
+            display: flex;
+            align-items: center;
+            margin-bottom: $grid-gutter / 2;
+            justify-content: space-between;
+
+            .button{
+                margin-left: $grid-gutter / 2;
+            }
+        }
+
         h3{
             font-family: 'Gilam', sans-serif;
             color: theme-color(yellow);
             font-size: 1.4em;
+            margin-bottom: 0;
         }
 
         p{
