@@ -53,7 +53,7 @@
         },
         "require": {
           "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^4.0"
+          "ffraenz/private-composer-installer": "^5.0"
         }
       }
     }
@@ -77,7 +77,8 @@
     "wpackagist-plugin/popup-builder":"3.68.4",
     "wpackagist-plugin/wordpress-seo":"^15.0",
     "wpackagist-plugin/social-warfare":"4.1.0",
-    "wpackagist-plugin/ajax-load-more":"5.3.8"
+    "wpackagist-plugin/ajax-load-more":"5.3.8",
+    "wpackagist-plugin/wordfence":"7.5.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
