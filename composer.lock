@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "704f780e81f68c478cebfe9170f92dfb",
+    "content-hash": "081b613840c1cd114004c739d1e43140",
     "packages": [
         {
             "name": "13milliseconds/ajax-load-more-pro",
@@ -45,7 +45,7 @@
         },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.9.3",
+            "version": "5.10.2",
             "dist": {
                 "type": "zip",
                 "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
