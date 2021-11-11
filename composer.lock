@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f237d95ee088586ad95e03796f7c9ea6",
+    "content-hash": "b3ae9444e75dfb1cb4a6269a85c448c9",
     "packages": [
         {
             "name": "13milliseconds/ajax-load-more-pro",
@@ -209,10 +209,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro",
-            "version": "1.9.13",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=1.9.13&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.0.2&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -221,10 +221,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro-media-files",
-            "version": "1.4.16",
+            "version": "2.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro-media-files&version=1.4.16&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro-media-files&version=2.0.1&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
             },
             "require": {
                 "composer/installers": "~1.0"
