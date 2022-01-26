@@ -29,6 +29,8 @@
   <meta name="msapplication-TileImage" content="@asset('images/favicon/ms-icon-144x144.png')">
   <meta name="theme-color" content="#000000">
 
+  <script src="https://act.couragecampaign.org/resources/actionkit.js"></script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
