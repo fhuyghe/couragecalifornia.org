@@ -2,32 +2,23 @@
 <script type="text/javascript">actionkit.forms.initPage()</script>
 
 
+<div class="newsletter-wrap">
+    <form id="signupForm" class="actionkit-widget" name="act" method="POST" action="https://act.couragecampaign.org/act/" accept-charset="utf-8">
+    <input type="hidden" name="utf8" value="&#x2714;">
 
-<form id="signupForm" class="action_form" name="act" method="POST" action="https://act.couragecampaign.org/act/" accept-charset="utf-8">
-<input type="hidden" name="utf8" value="&#x2714;">
+    <ul class="compact" id="ak-errors"></ul>
+        <input name="email" id="id_email" type="text" placeholder="Email Address">
+        <input type="hidden" name="phone" id="id_phone" type="text">
+        <input type="hidden" name="country" value="United States">
 
-<ul class="compact" id="ak-errors"></ul>
-<div id="unknown_user">
-    <div class="gridded">
-        <p>
-              <label for="id_email">Email <span class="req">*</span>:</label>
-              <input name="email" id="id_email" type="text">
-        </p>
+    <input class="submitform" type="submit" value="{{ $buttonText }}">
 
-        <p>            
-              <label for="id_phone">Phone:</label>
-              <input name="phone" id="id_phone" type="text">
-        </p>
-    </div>
-      <input type="hidden" name="country" value="United States">
+    <input type="hidden" name="page" value="CC_c4_signup">
+    <input type="hidden" name="lists" value="5" />
+
+    </form>
+    <div id="{{ $formName }}-replacement" class="signup-success" style="display: none;">You are now signed up!</div>
 </div>
-
-<p style="clear: both; text-align:center;"><input class="submitform" type="submit" value="Submit Form"></p>
-
-<input type="hidden" name="page" value="CC_c4_signup">
-<input type="hidden" name="lists" value="5" />
-
-</form>
 
 <script src="https://malsup.github.io/jquery.form.js"></script> 
 

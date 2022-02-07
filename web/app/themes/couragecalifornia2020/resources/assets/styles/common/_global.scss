@@ -131,8 +131,17 @@ html.sr .reveal {
     align-items: center;
     flex-flow: column;
 
+    ul{
+        padding-left: 0;
+    }
+    
     @include media-breakpoint-up(md){
+        justify-content: flex-start;
         flex-flow: row wrap;
+    }
+    
+    @include media-breakpoint-up(xl){
+        justify-content: center;
     }
 
     input[type="email"],
