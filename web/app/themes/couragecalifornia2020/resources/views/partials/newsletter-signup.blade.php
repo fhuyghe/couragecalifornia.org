@@ -1,5 +1,4 @@
-<script src="https://act.couragecampaign.org/resources/actionkit.js"></script>
-{# <script src="//c.shpg.org/114/sp.js"></script> #}
+
 <script type="text/javascript">actionkit.forms.initPage()</script>
 
 
