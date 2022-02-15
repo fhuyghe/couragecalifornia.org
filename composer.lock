@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "678eabe30ee8bc8b8ba0a7553dd0a292",
+    "content-hash": "dc5210ea19c8e38c6d2ad09ea9a364ef",
     "packages": [
         {
             "name": "13milliseconds/ajax-load-more-pro",
@@ -945,24 +945,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ajax-load-more/"
-        },
-        {
-            "name": "wpackagist-plugin/meta-tag-manager",
-            "version": "3.0.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/meta-tag-manager/",
-                "reference": "tags/3.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/meta-tag-manager.3.0.2.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/meta-tag-manager/"
         },
         {
             "name": "wpackagist-plugin/popup-builder",

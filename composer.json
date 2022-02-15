@@ -76,8 +76,7 @@
     "13milliseconds/ajax-load-more-pro": "dev-master",
     "wpackagist-plugin/the-events-calendar":"5.7.0",
     "wpackagist-plugin/add-search-to-menu":"4.6.4",
-    "wpackagist-plugin/simple-custom-post-order":"2.5.6",
-    "wpackagist-plugin/meta-tag-manager":"3.0.2"
+    "wpackagist-plugin/simple-custom-post-order":"2.5.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
