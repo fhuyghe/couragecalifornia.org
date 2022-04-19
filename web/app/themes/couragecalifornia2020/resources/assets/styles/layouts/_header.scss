@@ -55,6 +55,37 @@
     .nav-primary{
       .nav{
         flex-flow: column;
+
+        li.menu-item-has-children{
+          &:hover{
+            ul.sub-menu{
+              height: 100%;
+            }    
+          }
+        }
+
+        ul.sub-menu{
+          position: absolute;
+          height: 0%;
+          transition: .25s;
+          overflow: hidden;
+          background-color: theme-color(white);
+          list-style: none;
+          padding-left: 0;
+
+          li{
+            a{
+              color: theme-color(black);
+            }
+            
+            &:hover{
+              a{
+                color: theme-color(blue);
+              }
+            }
+          }
+
+        }
       }
     }
 
