@@ -16,5 +16,9 @@ export default {
     $('.hamburger').on('click', function () { 
       $('.top-banner').toggleClass('active');
     });
+
+    $('li.menu-item-has-children').on('click', function (e) { 
+      $(e.target).toggleClass('active');
+    })
   },
 };

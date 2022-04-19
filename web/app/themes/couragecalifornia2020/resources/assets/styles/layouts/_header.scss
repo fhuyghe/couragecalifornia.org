@@ -57,35 +57,65 @@
         flex-flow: column;
 
         li.menu-item-has-children{
-          &:hover{
-            ul.sub-menu{
-              height: 100%;
-            }    
+          &> a{
+            pointer-events: none;
           }
-        }
 
-        ul.sub-menu{
-          position: absolute;
-          height: 0%;
-          transition: .25s;
-          overflow: hidden;
-          background-color: theme-color(white);
-          list-style: none;
-          padding-left: 0;
+          ul.sub-menu{
+            display: none;
+            list-style: none;
+            padding-left: 0;
 
-          li{
-            a{
-              color: theme-color(black);
+            li{
+              font-size: 1em;
             }
             
-            &:hover{
-              a{
-                color: theme-color(blue);
-              }
+            a{
+              font-size: .7em;
+              color: theme-color(white);
             }
           }
 
+          &.active{
+            ul.sub-menu{
+              display: block;
+            }
+          }
+
+          @include media-breakpoint-up(md){
+            &:hover{
+              ul.sub-menu{
+                height: 100%;
+              }    
+            }
+            
+            ul.sub-menu{
+              display: block;
+              position: absolute;
+              height: 0%;
+              transition: .25s;
+              overflow: hidden;
+              background-color: theme-color(white);
+              
+    
+              li{
+                a{
+                  font-size: 1em;
+                  color: theme-color(black);
+                }
+                
+                &:hover{
+                  a{
+                    color: theme-color(blue);
+                  }
+                }
+              }
+    
+            }
+          }
         }
+
+        
       }
     }
 
