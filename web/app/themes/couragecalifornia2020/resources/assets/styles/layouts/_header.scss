@@ -85,14 +85,14 @@
           @include media-breakpoint-up(md){
             &:hover{
               ul.sub-menu{
-                height: 100%;
+                max-height: 200px;
               }    
             }
             
             ul.sub-menu{
               display: block;
               position: absolute;
-              height: 0%;
+              max-height: 0;
               transition: .25s;
               overflow: hidden;
               background-color: theme-color(white);
