@@ -84,7 +84,8 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": true
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
