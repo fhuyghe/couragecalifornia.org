@@ -87,7 +87,8 @@
     "preferred-install": "dist",
     "allow-plugins": {
       "composer/installers": true,
-      "ffraenz/private-composer-installer": true
+      "ffraenz/private-composer-installer": true,
+      "roots/wordpress-core-installer": true
     }
   },
   "minimum-stability": "dev",
