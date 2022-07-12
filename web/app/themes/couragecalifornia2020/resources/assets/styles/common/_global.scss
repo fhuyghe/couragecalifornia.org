@@ -4,6 +4,12 @@ body{
     color: theme-color(black);
 }
 
+@media (min-width: 1200px){
+.container {
+    max-width: 960px;
+}
+}
+
 .wrap{
     min-height: 100vh;
     padding-top: 60px;
@@ -30,6 +36,7 @@ h2{
 h3{
     font-family: 'Gilam', sans-serif;
     font-weight: 600;
+    margin-bottom: $grid-gutter / 2;
 }
 
 img{
@@ -200,5 +207,31 @@ html.sr .reveal {
     a{
         color: theme-color(yellow);
         text-transform: uppercase;
+    }
+}
+
+// Layout
+hr.wp-block-separator{
+    margin: $grid-gutter 0;
+}
+
+ol{
+    li{
+        margin-bottom: 1em;
+        padding-left: $grid-gutter/3;
+
+        a{
+            color: theme-color(blue);
+        }
+    }
+}
+
+.wp-block-table{
+    td{
+        padding: 20px 10px;
+
+        a{
+            color: theme-color(blue);
+        }
     }
 }
