@@ -27,6 +27,7 @@ class PageAbout extends Controller
     
     public function data(){
         $data = [];
+		$data['mission'] = get_field('mission');
 		$data['top_illustration'] = get_field('top_illustration');
 		$data['jobs'] = get_field('jobs');
 		$data['boards_of_director'] = get_field('boards_of_director');

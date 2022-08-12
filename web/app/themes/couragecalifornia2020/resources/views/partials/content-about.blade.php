@@ -1,3 +1,4 @@
+
 <section id="top" style="background-image: url({{ $data['top_illustration']['url'] }});">
     <div class="container">
         <div class="row">
@@ -6,6 +7,21 @@
                 @php the_content() @endphp
             </div>
         </div>
+    </div>
+</section>
+
+<section id="mission">
+    <div class="container">
+        @foreach ($data['mission'] as $missionBlock)
+            <div class="row">
+                <div class="col-lg-3">
+                    <h2>{{ $missionBlock['title'] }}</h2>
+                </div>
+                <div class="col-lg-9">
+                    {!! $missionBlock['text'] !!}
+                </div>
+            </div>
+        @endforeach
     </div>
 </section>
 

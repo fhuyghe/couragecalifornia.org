@@ -548,6 +548,19 @@
         padding: 0;
     }
 
+    #mission{
+        background: theme-color(blue);
+        color: theme-color(white);
+
+        .row{
+            margin-bottom: $grid-gutter;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
     #top{
         background: theme-color(yellow);
         background-repeat: no-repeat;
