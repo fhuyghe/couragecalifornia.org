@@ -126,8 +126,14 @@ html.sr .reveal {
 
 //Newsletter Form
 .newsletter-wrap{
+    #signupForm{
+        display: flex!important;
+    }
+    
     .signup-success{
         font-weight: 600;
+        margin-top: 10px;
+        color: theme-color(blue);
     }
 }
 
