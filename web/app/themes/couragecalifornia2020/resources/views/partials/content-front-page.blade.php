@@ -24,7 +24,9 @@
         </div>
     </div>
     <div class="image">
-        <img src="{!! $intro['image_desktop']['url'] !!}" class="desktop" />
+        <a href="{{ $intro['intro_link'] }}" target="_blank">
+            <img src="{!! $intro['image_desktop']['url'] !!}" class="desktop" />
+        </a>
         <img src="{!! $intro['image_mobile']['url'] !!}" class="mobile" />
     </div>
 </section>
