@@ -1,0 +1,244 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: $black;
+}
+
+@media (min-width: 1200px){
+.container {
+    max-width: 960px;
+}
+}
+
+#app{
+    min-height: 100vh;
+    padding-top: 60px;
+
+    @include media-breakpoint-up(md){
+        padding-top: $header-height; //Height of the header
+    }
+}
+
+.admin-bar #app{
+    padding-top: $header-height - 40;
+}
+
+h1{
+    font-family: 'Gilam', sans-serif;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Gilam', sans-serif;
+    font-weight: 600;
+}
+
+h3{
+    font-family: 'Gilam', sans-serif;
+    font-weight: 600;
+    margin-bottom: calc($grid-gutter / 2);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#content{
+    .container{
+
+        @include media-breakpoint-up(lg){
+            max-width: 800px;
+        }
+    }
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: none;
+    }
+
+    &.button{
+        display: inline-block;
+        font-family: 'Gilam', sans-serif;
+        font-size: .9em;
+        background-color: $blue;
+        color: $white;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+        box-shadow: 0;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: .25s;
+        border-radius: 0;
+        
+        &.yellow{
+            background-color: $yellow;
+        }
+        
+        &:not([href]),
+        &:not([href]):hover{
+            color: $white;
+        }
+
+        &:hover{
+            text-decoration: none;
+            background-color: darken($blue, 10%);
+        }
+
+        &.arrow{
+            &:after{
+                content: "→";
+                display: inline-block;
+                padding-left: 10px;
+                transition: .25s;
+            }
+
+            &:hover{
+                &:after{
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+p{
+    a{
+        color: $blue;
+        transition: .25s;
+    }
+}
+
+button:focus{
+    outline: 0;
+}
+
+//ScrollReveal
+html.sr .reveal {
+    opacity: 0;
+}
+
+
+//Newsletter Form
+.newsletter-wrap{
+    #signupForm{
+        display: flex!important;
+    }
+    
+    .signup-success{
+        font-weight: 600;
+        margin-top: 10px;
+        color: $blue;
+    }
+}
+
+.actionkit-widget{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    ul{
+        padding-left: 0;
+    }
+    
+    @include media-breakpoint-up(md){
+        justify-content: flex-start;
+        flex-flow: row wrap;
+    }
+    
+    @include media-breakpoint-up(xl){
+        justify-content: center;
+    }
+
+    input[type="email"],
+    input[type="tel"],
+    input[type="text"]{
+        border: 0;
+        border: 2px solid black;
+        background-color: transparent;
+        padding: 10px 20px;
+        flex: 1;
+        max-width: 500px;
+        width: 100%;
+
+        @include media-breakpoint-up(md){
+            border-right: 0;
+        }
+
+        &:focus{
+            outline: 0;
+        }
+
+        &::placeholder{
+            color: transparentize($color: #000000, $amount: .4);
+        }
+
+        &:-internal-autofill-selected{
+            background-color: transparent!important;
+        }
+    }
+
+    p{
+        margin-bottom: 0;
+        width: 100%;
+
+        @include media-breakpoint-up(md){
+            width: auto;
+        }
+    }
+
+    input[type="submit"]{
+        background-color: $blue;
+        border: 2px solid $blue;
+        color: $white;
+        text-transform: uppercase;
+        border-radius: 0;
+        outline: 0;
+        padding: 11px 20px 10px;
+        font-weight: 600;
+    }
+}
+
+.posts-navigation{
+    padding: $grid-gutter 0;
+    text-align: center;
+
+    a{
+        color: $yellow;
+        text-transform: uppercase;
+    }
+}
+
+// Layout
+hr.wp-block-separator{
+    margin: $grid-gutter 0;
+}
+
+ol{
+    li{
+        margin-bottom: 1em;
+        padding-left: $grid-gutter/3;
+
+        a{
+            color: $blue;
+        }
+    }
+}
+
+.wp-block-table{
+    td{
+        padding: 20px 10px;
+
+        a{
+            color: $blue;
+        }
+    }
+}

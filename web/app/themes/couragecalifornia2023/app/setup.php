@@ -14,8 +14,27 @@ use function Roots\bundle;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    bundle('app')->enqueue();
-}, 100);
+
+    $is_dev_request = getenv('WP_ENV') == 'development';
+    $rest_url = $is_dev_request ? 'http://localhost:3001/wp/wp-admin/admin-ajax.php' : admin_url('admin-ajax.php');
+  
+    $ajax_params = array(
+        'ajax_url' => $rest_url,
+        'ajax_nonce' => wp_create_nonce('my_nonce'),
+    );
+  
+    bundle('app')->enqueue()->localize('ajax_object', $ajax_params);;
+  }, 100);
+
+  add_action('admin_enqueue_scripts', function () {
+    $ajax_params = array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'ajax_nonce' => wp_create_nonce('my_nonce'),
+    );
+  
+    wp_enqueue_script('sage/admin.js', asset('scripts/admin.js'), ['jquery'], null, true);
+    wp_localize_script('sage/admin.js', 'ajax_object', $ajax_params);
+  });
 
 /**
  * Register the theme assets with the block editor.
@@ -58,6 +77,7 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'secondary_navigation' => __('Secondary Navigation', 'sage')
     ]);
 
     /**
@@ -128,9 +148,62 @@ add_action('widgets_init', function () {
         'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary',
     ] + $config);
-
     register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
+        'name'          => __('Footer Left', 'sage'),
+        'id'            => 'left-footer'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Right', 'sage'),
+        'id'            => 'right-footer'
     ] + $config);
 });
+
+// Register Post Types
+// Our custom post type function
+function create_posttype() {
+ 
+    register_post_type( 'staff',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Staff' ),
+                'singular_name' => __( 'Staff Member' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'staff'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-businessperson',
+            'supports' => array( 'title', 'thumbnail', 'editor' ),
+        )
+    );
+    
+    register_post_type( 'job',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Jobs' ),
+                'singular_name' => __( 'Job' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'jobs'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-hammer',
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', __NAMESPACE__.'\\create_posttype' );
+
+// Add options Page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+// Change excerpt length
+add_filter( 'excerpt_length', function($length) {
+    return 30;
+} );

@@ -1,0 +1,138 @@
+.single{
+    article{
+        margin-bottom: 0;
+
+        .container{
+            margin: auto;
+            max-width: 900px;
+        }
+
+        header{
+            padding-top: $grid-gutter;
+
+            .post-categories{
+                font-size: .9em;
+                list-style: none;
+                padding-left: 0;
+                margin-bottom: 0;
+
+                li{
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: $yellow;
+                }
+            }
+
+            h1{
+                font-size: 2em;
+                margin-bottom: 0;
+            }
+
+            .byline{
+                margin-bottom: 0;
+            }
+
+            time{
+                color: $grey;
+            }
+
+            //Social Warfare Logos
+            .swp_social_panel{
+                height: $grid-gutter;
+                justify-content: flex-start;
+                margin-bottom: 0!important;
+                
+                .swp_share_button:not(.total_shares):not(.total_sharesalt){
+                    width: $grid-gutter;
+                    height: $grid-gutter;
+                    border-radius: $grid-gutter;
+                    border: 1px solid $grey;
+                    background: transparent!important;
+                    flex: 0 0 $grid-gutter!important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    a{
+                        color: $black;
+                        background: transparent;
+
+                        .iconFiller{
+                            width: $grid-gutter!important;
+
+                            .spaceManWilly{
+                                width: auto;
+                            }
+
+                            .sw{
+                                float: none;
+                            }
+                        }
+
+                        .swp_share{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .hero{
+                padding-top: $grid-gutter;
+
+                img{
+                    max-height: 600px;
+                    width: auto;
+                    margin: auto;
+                    display: block;
+                }
+            }
+        }
+        
+        .entry-content{
+            padding: $grid-gutter 0;
+
+            a:not(.button){
+                color: $blue;
+
+                &:hover{
+                    color: $yellow;
+                }
+            }
+        }
+
+        footer{
+            padding: $grid-gutter 0;
+            background: $beige;
+
+            h3{
+                font-family: 'Gilam', sans-serif;
+                color: $yellow;
+                font-size: 1em;
+            }
+
+            p{
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.wp-block-image{
+    margin: $grid-gutter auto;
+
+    img{
+        max-height: 600px;
+        width: auto;
+        margin: auto;
+        display: block;
+    }
+
+    figcaption{
+        font-style: italic;
+        text-align: center;
+        font-style: .8em;
+    }
+}

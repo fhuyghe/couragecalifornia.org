@@ -19,9 +19,19 @@
     "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
-    "@roots/bud": "6.12.2",
-    "@roots/bud-tailwindcss": "6.12.2",
-    "@roots/sage": "6.12.2"
+    "@popperjs/core": "^2.11.7",
+    "@roots/bud": "6.12.3",
+    "@roots/bud-sass": "^6.12.3",
+    "@roots/sage": "6.12.3",
+    "bootstrap": "^5.2.3",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "jquery-bridget": "^2.0.1",
+    "jquery-parallax.js": "^1.5.0",
+    "popper.js": "^1.14.7",
+    "scrollreveal": "^4.0.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hamburgers": "^1.2.1"
+  }
 }

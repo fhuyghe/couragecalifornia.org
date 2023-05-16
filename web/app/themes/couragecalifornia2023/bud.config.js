@@ -23,7 +23,11 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/docs/bud.setPublicPath}
    */
-  app.setPublicPath('/app/themes/sage/public/');
+  app.setPublicPath('/app/themes/couragecalifornia2023/public/');
+
+  app.provide({
+    jquery: ["jQuery", "$"],
+  })
 
   /**
    * Development server settings
@@ -33,8 +37,8 @@ export default async (app) => {
    * @see {@link https://bud.js.org/docs/bud.watch}
    */
   app
-    .setUrl('http://localhost:3000')
-    .setProxyUrl('http://example.test')
+    .setUrl('http://localhost:3005')
+    .setProxyUrl('http://couragecalifornia.test')
     .watch(['resources/views', 'app']);
 
   /**
@@ -59,8 +63,5 @@ export default async (app) => {
     .set('settings.spacing.padding', true)
     .set('settings.spacing.units', ['px', '%', 'em', 'rem', 'vw', 'vh'])
     .set('settings.typography.customFontSize', false)
-    .useTailwindColors()
-    .useTailwindFontFamily()
-    .useTailwindFontSize()
     .enable();
 };

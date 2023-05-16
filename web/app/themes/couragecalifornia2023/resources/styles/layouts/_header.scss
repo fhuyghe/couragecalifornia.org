@@ -1,0 +1,257 @@
+.top-banner{
+  background-color: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  //height: $header-height;
+  z-index: 999;
+  padding: 10px 0;
+  
+  @include media-breakpoint-up(md){
+    height: $header-height;
+    padding: calc($grid-gutter / 2);
+  }
+  
+  .container{
+    max-width: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  img{
+    max-height: 40px;
+    width: auto;
+  }
+
+  &.active{
+    .nav-all{
+      transform: translateY(0);
+    }
+
+    .hamburger{
+      @extend .is-active;
+    }
+  }
+
+  .nav-all{
+    z-index: -1;
+    position: fixed;
+    background-color: $black;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: .5s;
+
+    .nav-primary{
+      .nav{
+        flex-flow: column;
+
+        li.menu-item-has-children{
+          &> a{
+            pointer-events: none;
+          }
+
+          ul.sub-menu{
+            display: none;
+            list-style: none;
+            padding-left: 0;
+
+            li{
+              font-size: 1em;
+            }
+            
+            a{
+              font-size: .7em;
+              color: $white;
+            }
+          }
+
+          &.active{
+            ul.sub-menu{
+              display: block;
+            }
+          }
+
+          @include media-breakpoint-up(md){
+            &:hover{
+              ul.sub-menu{
+                max-height: 200px;
+              }    
+            }
+            
+            ul.sub-menu{
+              display: block;
+              position: absolute;
+              max-height: 0;
+              transition: .25s;
+              overflow: hidden;
+              background-color: $white;
+              
+    
+              li{
+                a{
+                  font-size: 1em;
+                  color: $black;
+                }
+                
+                &:hover{
+                  a{
+                    color: $blue;
+                  }
+                }
+              }
+    
+            }
+          }
+        }
+
+        
+      }
+    }
+
+    .nav-secondary{
+      .nav{
+        flex-flow: row wrap;
+        justify-content: center;
+
+        li{
+          padding: .5em;
+          
+          &:first-child{
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(xl){
+      z-index: 1;
+      transform: none;
+      flex-flow: row;
+      position: relative;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      flex: 1;
+      text-align: left;
+      
+      .nav-primary{
+        flex: 1;
+        padding-left: calc($grid-gutter / 2);
+        
+        .nav{
+          flex-flow: row;
+        }
+      }
+
+      .nav-secondary{
+        .nav{
+  
+          li:first-child{
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .nav{
+    li {
+    @extend .nav-item;
+    font-size: 1.5em;
+    padding: 0.5rem 1rem;
+    
+    @include media-breakpoint-up(xl){
+      font-size: .9em;
+    }
+
+    &.current-menu-item{
+      a{
+        color: $yellow;
+
+        &:after{
+          width: 100%;
+          left: 0;
+        }
+
+        @include media-breakpoint-up(xl){
+          color: $white;
+        }
+      }
+    }
+
+    &.social a{
+      &:after{
+        width: 0!important;
+      }
+    }
+  
+    a {
+      @extend .nav-link;
+      padding: 0;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      position: relative;
+      transition: .25s;
+
+      &:hover{
+        color: $yellow;
+
+        &:after{
+          width: 100%;
+          left: 0;
+        }
+      }
+
+      @include media-breakpoint-up(xl){
+        &:after{
+          content: '';
+          height: 2px;
+          position: absolute;
+          width: 0%;
+          left: 50%;
+          bottom: -2px;
+          background: $white;
+          transition: .25s;
+        }
+      }
+
+    }
+  }
+  }
+}
+
+.hamburger{
+  padding: 0;
+  height: 25px;
+  
+  &:hover{
+    opacity: 1!important;
+  }
+
+  @include media-breakpoint-up(xl){
+    display: none;
+  }
+
+  .hamburger-box{
+    width: 30px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before{
+    width: 30px;
+    background-color: $white!important;
+  }
+}

@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'copyright' => $this->copyright(),
         ];
     }
 
@@ -35,5 +36,20 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    public function copyright() {
+        $all_posts = get_posts( 'post_status=publish&order=ASC' );
+        $first_post = $all_posts[0];
+        $first_date = $first_post->post_date_gmt;
+        $copyright = '&copy; ';
+        if ( substr( $first_date, 0, 4 ) == date( 'Y' ) ) {
+            $copyright .= date( 'Y' );
+        } else {
+            $copyright .= substr( $first_date, 0, 4 ) . "-" . date( 'Y' );
+        }
+        $copyright .= ' ';
+        $copyright .= get_bloginfo( 'name' );
+        return $copyright;
     }
 }

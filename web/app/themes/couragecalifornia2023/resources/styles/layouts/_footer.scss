@@ -1,0 +1,125 @@
+footer.main-footer{
+    background-color: $black;
+    color: $white;
+    padding: $grid-gutter 0;
+    font-size: .8em;
+
+    p{
+        a{
+            color: $white;
+
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
+
+    .row{
+        flex-flow: column-reverse;
+        
+        @include media-breakpoint-up(md){
+            flex-flow: row wrap;
+        }
+    }
+
+    .copyright{
+        color: $grey;
+        margin-top: 5px;
+    }
+
+    ul{
+        padding-left: 0;
+        list-style: none;
+
+        a{
+            color: $white;
+
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+
+    .left{
+        @include media-breakpoint-up(md){
+            padding-right: $grid-gutter;
+        }
+
+        ul{
+            display: flex;
+            margin: 5px 0 0;
+            
+            li{
+                margin-right: 10px;
+                
+                &:first-child{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .right{
+        margin-bottom: calc($grid-gutter / 2);
+
+        @include media-breakpoint-up(md){
+            margin-bottom: 0;
+        }
+
+        .footer-signup{
+            display: flex;
+            align-items: center;
+            margin-bottom: calc($grid-gutter / 2);
+            justify-content: space-between;
+
+            .button{
+                margin-left: calc($grid-gutter / 2);
+            }
+        }
+
+        h3{
+            font-family: 'Gilam', sans-serif;
+            color: $yellow;
+            font-size: 1.4em;
+            margin-bottom: 0;
+        }
+
+        p{
+            margin-bottom: 10px;
+            line-height: 1.4em;
+        }
+    }
+
+    // Newsletter form
+    .newsletter-wrap{
+        padding-bottom: 20px;
+    }
+
+    .actionkit-widget{
+        flex-flow: row wrap;
+
+        p{
+            width: auto;
+            margin-bottom: 0;
+        }
+        
+        input[type="text"]{
+            border-color: $white;
+            color: $white;
+
+            &::placeholder{
+                color: transparentize($color: #fff, $amount: .4);
+            }
+    
+            &:-internal-autofill-selected{
+                background-color: transparent!important;
+            }
+        }
+
+        input[type="submit"]{
+            background-color: $white;
+            border-color: $white;
+            color: $black;
+        }
+    }
+}
