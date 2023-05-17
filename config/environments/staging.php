@@ -14,4 +14,10 @@ use Roots\WPConfig\Config;
  * Example: `Config::define('DISALLOW_FILE_MODS', false);`
  */
 
+Config::define('WP_DEBUG', true);
+Config::define('WP_DEBUG_DISPLAY', true);
+Config::define('WP_DEBUG_LOG', env('WP_DEBUG_LOG') ?? true);
+Config::define('WP_DISABLE_FATAL_ERROR_HANDLER', true);
+Config::define('SCRIPT_DEBUG', true);
+
 Config::define('DISALLOW_INDEXING', true);
