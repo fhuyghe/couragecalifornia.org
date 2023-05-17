@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e7b1ec0261b2b8e8da3c9bc5eab7548",
+    "content-hash": "6eb65d43964f5f785d504a97f583e420",
     "packages": [
         {
             "name": "13milliseconds/ajax-load-more-pro",
@@ -45,7 +45,7 @@
         },
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "6.0.3",
+            "version": "6.1.6",
             "dist": {
                 "type": "zip",
                 "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%version}"
@@ -258,22 +258,10 @@
         },
         {
             "name": "deliciousbrains-plugin/wp-migrate-db-pro",
-            "version": "2.0.2",
+            "version": "2.6.6",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.0.2&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
-            },
-            "require": {
-                "composer/installers": "~1.0 || ~2.0"
-            },
-            "type": "wordpress-plugin"
-        },
-        {
-            "name": "deliciousbrains-plugin/wp-migrate-db-pro-media-files",
-            "version": "2.1.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro-media-files&version=2.1.0&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
+                "url": "https://composer.deliciousbrains.com/?wc-api=delicious-brains&request=composer_download&package=wp-migrate-db-pro&version=2.6.6&composer_key=8DAF13E16CC13B06BE314F3D5684DA29"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
@@ -5306,15 +5294,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.12.6",
+            "version": "6.1.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.12.6"
+                "reference": "tags/6.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.12.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.6.1.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5342,15 +5330,15 @@
         },
         {
             "name": "wpackagist-plugin/popup-builder",
-            "version": "3.68.4",
+            "version": "4.1.14",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/popup-builder/",
-                "reference": "tags/3.68.4"
+                "reference": "tags/4.1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/popup-builder.3.68.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/popup-builder.4.1.14.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5396,15 +5384,15 @@
         },
         {
             "name": "wpackagist-plugin/the-events-calendar",
-            "version": "5.7.0",
+            "version": "6.0.13.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/the-events-calendar/",
-                "reference": "tags/5.7.0"
+                "reference": "tags/6.0.13.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.5.7.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/the-events-calendar.6.0.13.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5450,15 +5438,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-fastest-cache",
-            "version": "0.9.9",
+            "version": "1.1.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-fastest-cache/",
-                "reference": "tags/0.9.9"
+                "reference": "tags/1.1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.0.9.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-fastest-cache.1.1.5.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -5474,12 +5462,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "d1af11449398214f9664514ce705c5154ead9c38"
+                "reference": "3893a06a14387877302d1d93c462b882844d5225"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/d1af11449398214f9664514ce705c5154ead9c38",
-                "reference": "d1af11449398214f9664514ce705c5154ead9c38",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3893a06a14387877302d1d93c462b882844d5225",
+                "reference": "3893a06a14387877302d1d93c462b882844d5225",
                 "shasum": ""
             },
             "conflict": {
@@ -5805,7 +5793,7 @@
                 "phpwhois/phpwhois": "<=4.2.5",
                 "phpxmlrpc/extras": "<0.6.1",
                 "phpxmlrpc/phpxmlrpc": "<4.9.2",
-                "pimcore/customer-management-framework-bundle": "<3.3.9",
+                "pimcore/customer-management-framework-bundle": "<3.3.10",
                 "pimcore/data-hub": "<1.2.4",
                 "pimcore/perspective-editor": "<1.5.1",
                 "pimcore/pimcore": "<10.5.21",
@@ -6074,7 +6062,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-12T21:03:58+00:00"
+            "time": "2023-05-17T16:04:53+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
