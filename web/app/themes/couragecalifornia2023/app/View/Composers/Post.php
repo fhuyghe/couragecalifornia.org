@@ -29,6 +29,13 @@ class Post extends Composer
         ];
     }
 
+    public function with()
+    {
+        return [
+            'link' => get_field('link'),
+        ];
+    }
+
     /**
      * Returns the post title.
      *

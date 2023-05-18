@@ -21,19 +21,18 @@
         {{-- ACTION --}}
         @if(in_category(7))
         <div>
-          @php $link = get_post_meta(get_the_ID() , 'wpcf-field_ak_link_url', true) @endphp
-          @if(!$link)
-              @php $link = get_field('link', get_the_ID()) @endphp
-          @endif
+          @if($link)
           <a href="{{ $link }}" target="_blank" class="button yellow arrow">Act Now</a>
+          @endif
         </div>
         @endif
 
         {{-- IN THE NEWS --}}
         @if(in_category(6))
         <div>
-          @php $link = get_field('link', get_the_ID()) @endphp
+          @if($link)
           <a href="{{ $link }}" target="_blank" class="button yellow arrow">Read Now</a>
+          @endif
         </div>
         @endif
       </div>

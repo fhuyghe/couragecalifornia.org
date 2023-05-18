@@ -1,0 +1,11 @@
+@import "bootstrap";
+@import "common/variables";
+@import "layouts/posts";
+@import "common/global";
+
+.editor-styles-wrapper{
+    max-width: 50rem;
+    margin: 0 auto!important;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
