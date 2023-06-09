@@ -8,7 +8,6 @@
                 @php the_content() @endphp
             </div>
             <div class="col-lg-6 categories">
-                <button id="clearFilters">All</button>
                 {!! do_shortcode('[ajax_load_more_filters id="categories" target="ajax_load_more"]') !!}
             </div>
         </div>

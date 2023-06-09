@@ -387,18 +387,13 @@
 .page.engage{
     background: $lightgrey;
 
-    //Activate the ALL button
-    #clearFilters{
-        color: $yellow;
+    h1{
+        max-width: 25rem;
     }
 
     &.filtered{
         #featuredAction{
             display: none;
-        }
-
-        #clearFilters{
-            color: $grey;
         }
     }
 
@@ -407,15 +402,8 @@
     }
 
     .categories{
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        button{
-            padding-right: 20px;
-        }
         
-        button, 
+        button,
         li div.alm-filter--link{
             cursor: pointer;
             font-size: .7em;
@@ -441,6 +429,18 @@
             @include media-breakpoint-up(lg){
                 font-size: .9em;
                 padding: 0 20px 0 0;
+            }
+        }
+
+        button[type="reset"]{
+            font-size: .8rem;
+            color: $black;
+
+            span:before{
+                content: 'X';
+                font-size: .8em;
+                font-weight: 600;
+                margin-right: .5rem;
             }
         }
         
