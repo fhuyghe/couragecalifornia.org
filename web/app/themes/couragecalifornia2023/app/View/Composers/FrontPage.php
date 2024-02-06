@@ -28,6 +28,7 @@ class FrontPage extends Composer
             'intro' => get_field('intro'),
             'newsletter' => get_field('newsletter'),
             'banner' => get_field('courage_score_banner'),
+            'engage' => get_field('engage'),
             'voter_guide' => get_field('voter_guide'),
             'institute' => get_field('institute'),
             'featured_action' => get_field('featured_action'),

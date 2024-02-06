@@ -32,7 +32,7 @@
 {{-- Engage --}}
 <section id="engage">
     <div class="container">
-        <h2>Engage</h2>
+        <h2>{{ $engage['title'] }}</h2>
         <div class="row">
             <div class="col-lg-8 action">
                 @php $article = $featured_action @endphp
@@ -45,7 +45,7 @@
             </div>
         </div>
         <footer>
-            <a class="button" href="/engage">Read More</a>
+            <a class="button" href="{{ $engage['link'] }}">{{ $engage['button'] }}</a>
         </footer>
     </div>
 </section>
@@ -71,7 +71,7 @@
             <div class="col-lg-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 <p>{!! $banner['text'] !!}</p>
-                <a class="button arrow" href="/courage-score">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" href="{{ $voter_guide['link'] }}">{{ $banner['button_text'] }}</a>
             </div>
             <div class="col-lg-6 image">
                 <img src="{!! $banner['image']['url'] !!}" />
@@ -87,7 +87,7 @@
             <div class="col-md-6 text slide-up">
                 <h2>{!! formatTitle($voter_guide['title']) !!}</h2>
                 <p>{!! $voter_guide['text'] !!}</p>
-                <a class="button arrow" href="/voter-guide">{{ $voter_guide['button_text'] }}</a>
+                <a class="button arrow" href="{{ $voter_guide['link'] }}">{{ $voter_guide['button_text'] }}</a>
             </div>
             <div class="offset-md-1 col-md-5 image">
                 <img src="{!! $voter_guide['image']['url'] !!}" />
@@ -105,7 +105,7 @@
             </div>
             <div class="col-md-7 offset-md-1 text">
                 <h2>{!! formatTitle($institute['title']) !!}</h2>
-                <a class="button arrow" target="_blank" href="https://couragecaliforniainstitute.org">{{ $institute['button_text'] }}</a>
+                <a class="button arrow" target="_blank" href="{{ $voter_guide['link'] }}">{{ $institute['button_text'] }}</a>
             </div>
         </div>
     </div>
