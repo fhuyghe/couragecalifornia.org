@@ -30,6 +30,7 @@
 </section>
 
 {{-- Engage --}}
+@if ($engage)
 <section id="engage">
     <div class="container">
         <h2>{{ $engage['title'] }}</h2>
@@ -49,9 +50,11 @@
         </footer>
     </div>
 </section>
+@endif
 
 {{-- Newsletter --}}
- <section id="newsletter" style="background-image: url({!! $newsletter['image']['url'] !!})">
+@if ($newsletter)
+<section id="newsletter" style="background-image: url({!! $newsletter['image']['url'] !!})">
     <div class="container">
         <div class="text">
             <h2>{!! $newsletter['title'] !!}</h2>
@@ -63,6 +66,7 @@
         </div>
     </div>
 </section>
+@endif
 
  {{-- COURAGE SCORE --}}
  <section id="courageScore" class="banner">
@@ -71,7 +75,7 @@
             <div class="col-lg-6 text slide-up">
                 <h2>{!! formatTitle($banner['title']) !!}</h2>
                 <p>{!! $banner['text'] !!}</p>
-                <a class="button arrow" href="{{ $voter_guide['link'] }}">{{ $banner['button_text'] }}</a>
+                <a class="button arrow" href="{{ $banner['link'] }}">{{ $banner['button_text'] }}</a>
             </div>
             <div class="col-lg-6 image">
                 <img src="{!! $banner['image']['url'] !!}" />
